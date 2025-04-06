@@ -439,4 +439,23 @@
 "☾@󰌷  (chain)@-" {:lang "☾" :algo "󰌷  (chain)" :lib "-" :id 42 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
 "☾@⨉  (cross product)@-" {:lang "☾" :algo "⨉  (cross product)" :lib "-" :id 100 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
 "☾@⪡  (rotate left)@-" {:lang "☾" :algo "⪡  (rotate left)" :lib "-" :id 4104 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"TinyAPL@/ (reduce)@-" {:lang "TinyAPL" :algo "/ (reduce)" :lib "-" :id 1 :doc "https://tinyapl.rubenverg.com/docs/primitive/reduce" :sig "-"}
+"TinyAPL@¨ (each)@-" {:lang "TinyAPL" :algo "¨ (each)" :lib "-" :id 2 :doc "https://tinyapl.rubenverg.com/docs/primitive/each" :sig "-"}
+"<!--@TinyAPL@3" {:lang "<!--" :algo "TinyAPL" :lib "3" :id `⌿ (replicate)` :doc "" :sig "-"}
+"TinyAPL@↟ (on prefixes)@-" {:lang "TinyAPL" :algo "↟ (on prefixes)" :lib "-" :id 4 :doc "https://tinyapl.rubenverg.com/docs/primitive/on_prefixes" :sig "-"}
+"TinyAPL@↡ (on infixes)@-" {:lang "TinyAPL" :algo "↡ (on infixes)" :lib "-" :id 5 :doc "https://tinyapl.rubenverg.com/docs/primitive/on_infixes" :sig "-"}
+"TinyAPL@⊞ (table)@-" {:lang "TinyAPL" :algo "⊞ (table)" :lib "-" :id 6 :doc "https://tinyapl.rubenverg.com/docs/primitive/table" :sig "-"}
+"TinyAPL@∙ (inner product)@-" {:lang "TinyAPL" :algo "∙ (inner product)" :lib "-" :id 7 :doc "https://tinyapl.rubenverg.com/docs/primitive/inner_product" :sig "-"}
+"TinyAPL@⍳ (index generator)@-" {:lang "TinyAPL" :algo "⍳ (index generator)" :lib "-" :id 8 :doc "https://tinyapl.rubenverg.com/docs/primitive/index_generator" :sig "-"}
+"TinyAPL@∪ (unique)@-" {:lang "TinyAPL" :algo "∪ (unique)" :lib "-" :id 15 :doc "https://tinyapl.rubenverg.com/docs/primitive/unique" :sig "-"}
+"TinyAPL@⍕ (format)@-" {:lang "TinyAPL" :algo "⍕ (format)" :lib "-" :id 16 :doc "https://tinyapl.rubenverg.com/docs/primitive/format" :sig "-"}
+"TinyAPL@∊ (element of)@-" {:lang "TinyAPL" :algo "∊ (element of)" :lib "-" :id 17 :doc "https://tinyapl.rubenverg.com/docs/primitive/element_of" :sig "-"}
+"TinyAPL@⍸ (where)@-" {:lang "TinyAPL" :algo "⍸ (where)" :lib "-" :id 18 :doc "https://tinyapl.rubenverg.com/docs/primitive/where" :sig "-"}
+"TinyAPL@⍪ (join)@-" {:lang "TinyAPL" :algo "⍪ (join)" :lib "-" :id 21 :doc "https://tinyapl.rubenverg.com/docs/primitive/join" :sig "-"}
+"TinyAPL@⍉ (transpose)@-" {:lang "TinyAPL" :algo "⍉ (transpose)" :lib "-" :id 22 :doc "https://tinyapl.rubenverg.com/docs/primitive/transpose" :sig "-"}
+"TinyAPL@⊆ (partition)@-" {:lang "TinyAPL" :algo "⊆ (partition)" :lib "-" :id 23 :doc "https://tinyapl.rubenverg.com/docs/primitive/partition" :sig "-"}
+"TinyAPL@⌿ (replicate)@-" {:lang "TinyAPL" :algo "⌿ (replicate)" :lib "-" :id 25 :doc "https://tinyapl.rubenverg.com/docs/primitive/replicate" :sig "-"}
+"<!--@TinyAPL@30" {:lang "<!--" :algo "TinyAPL" :lib "30" :id `¨ (each)` :doc "" :sig "-"}
+"TinyAPL@⍪ (catenate)@-" {:lang "TinyAPL" :algo "⍪ (catenate)" :lib "-" :id 42 :doc "https://tinyapl.rubenverg.com/docs/primitive/catenate" :sig "-"}
+"TinyAPL@⊖ (rotate)@-" {:lang "TinyAPL" :algo "⊖ (rotate)" :lib "-" :id 4104 :doc "https://tinyapl.rubenverg.com/docs/primitive/rotate" :sig "-"}
 })
