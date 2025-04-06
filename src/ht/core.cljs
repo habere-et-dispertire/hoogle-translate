@@ -266,7 +266,9 @@
      ;; Algorithm cells - one for each algorithm ID
      (for [[algo-name algo-id color-index] algo-ids]
        (let [matching-entries (filter #(= algo-id (get-id %)) 
-                                     (get algo-entries-by-lang language-name []))]
+                                     (get algo-entries-by-lang language-name []))
+             algo-name2 (some-> matching-entries first get-algo)
+             color-index (get color-indices (normalize-algo (or algo-name2 "")) 0)]
          (if (seq matching-entries)
            ;; Found algorithm for this language
            [:td {:style {:padding "12px 30px"
@@ -306,25 +308,28 @@
         
         ;; Count algorithm occurrence frequencies by ID
         algo-freq (->> all-algo-entries
-                       (map get-id)
+                       (map get-algo)
+                       (map normalize-algo)
                        (frequencies))
         
         ;; Sort by frequency and assign color indices
         color-indices (->> algo-freq
                            (sort-by second >)
                            (map first)
-                           (map-indexed (fn [i id] [id (min i 6)]))
+                           (map-indexed (fn [i name] [name (min i 6)]))
                            (into {}))
         
         ;; Create algo-ids with colors
         algo-ids-with-colors (map (fn [[name id]]
-                                   [name id (get color-indices id 0)])
+                                   [name id (get color-indices (normalize-algo name))])
                                  algo-ids-with-names)
         
         ;; Filter languages to only include those that match the specified language
         filtered-languages (if (and lang (not= lang ""))
                              (filter #(= (normalize-lang %) (normalize-lang lang)) all-languages)
                              all-languages)]
+    
+    ;; (swap! debug assoc :info (str "Color indices: " (pr-str color-indices)))
     
     [:table {:style {:font-family "'JetBrains Mono', monospace"
                     :padding "12px 12px"
@@ -333,23 +338,25 @@
                     :margin-right "auto"
                     :text-align "center"}}
      
-     ;; Table header
-     [:thead
-      [:tr
-       [:th {:style {:padding "12px 20px"}} ""] ;; Logo column
-       [:th {:style {:padding "12px 20px"}} "Language"]
-       (for [[algo-name _ _] algo-ids-with-colors]
-         [:th {:style {:padding "12px 20px"}} algo-name])]]
-     
      ;; Table body
      [:tbody
       (->> all-languages
-           ;; Sort by presence of first algorithm, then alphabetically
+           ;; Sort by algorithm frequency instead of by language name
            (sort-by (fn [lang-name]
                      (let [entries (get algo-entries-by-lang lang-name [])
-                           first-algo-id (second (first algo-ids-with-names))
-                           has-first-algo (some #(= first-algo-id (get-id %)) entries)]
-                       [(if has-first-algo 0 1) lang-name])))
+                           ;; Count how many algorithms of each color index the language has
+                           color-counts (for [i (range 7)]  ;; 0-6 are our color indices
+                                          (count (filter (fn [entry]
+                                                   (let [algo-name (get-algo entry)
+                                                        normalized (normalize-algo algo-name)
+                                                        color (get color-indices normalized 7)]  ;; Default to highest value if not found
+                                                     (= color i)))
+                                                 entries)))
+                           ;; Create a vector for sorting: [count-of-color-0, count-of-color-1, ...] 
+                           ;; Negative values to sort in descending order
+                           sort-key (vec (map #(- %) color-counts))]
+                       ;; Append language name at the end for stable sorting
+                       (conj sort-key lang-name))))
            (map #(generate-table-mode-row % algo-entries-by-lang algo-ids-with-colors color-indices)))]]))
 
 (defn decide-how [input]
