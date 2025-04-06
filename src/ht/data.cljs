@@ -182,6 +182,8 @@
 "Python@transpose@pandas" {:lang "Python" :algo "transpose" :lib "pandas" :id 22 :doc "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html" :sig "-"}
 "Ruby@transpose@Array" {:lang "Ruby" :algo "transpose" :lib "Array" :id 22 :doc "https://apidock.com/ruby/Array/transpose" :sig "-"}
 "APL@⍉ (transpose)@-" {:lang "APL" :algo "⍉ (transpose)" :lib "-" :id 22 :doc "http://microapl.com/apl_help/ch_020_020_540.htm" :sig "-"}
+"F#@transpose@List" {:lang "F#" :algo "transpose" :lib "List" :id 22 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#transpose" :sig "-"}
+"F#@zip@List" {:lang "F#" :algo "zip" :lib "List" :id 28 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#zip" :sig "-"}
 "Haskell@transpose@Data.List" {:lang "Haskell" :algo "transpose" :lib "Data.List" :id 22 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:transpose" :sig "-"}
 "q@flip@- " {:lang "q" :algo "flip" :lib "- " :id 22 :doc "https://code.kx.com/v2/ref/flip/" :sig "-"}
 "Clojure@transpose@core.matrix" {:lang "Clojure" :algo "transpose" :lib "core.matrix" :id 22 :doc "https://mikera.github.io/core.matrix/doc/clojure.core.matrix.html#var-transpose" :sig "-"}
