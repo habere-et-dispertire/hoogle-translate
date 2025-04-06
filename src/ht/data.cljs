@@ -401,9 +401,9 @@
 "Excel@filter@-" {:lang "Excel" :algo "filter" :lib "-" :id 3 :doc "https://support.microsoft.com/en-us/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759" :sig "-"}
 "Excel@unique@-" {:lang "Excel" :algo "unique" :lib "-" :id 15 :doc "https://support.microsoft.com/en-us/office/unique-function-c5ab87fd-30a3-4ce9-9d1a-40204fb85e1e" :sig "-"}
 "Excel@arraytotext@-" {:lang "Excel" :algo "arraytotext" :lib "-" :id 16 :doc "https://support.microsoft.com/en-us/office/arraytotext-function-9cdcad46-2fa5-4c6b-ac92-14e7bc862b8b" :sig "-"}
-"Excel@textjoin@-" {:lang "Excel" :algo "textjoin" :lib "-" :id 16 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
+"Excel@textjoin¹@-" {:lang "Excel" :algo "textjoin¹" :lib "-" :id 16 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
 "Excel@= (equal)@-" {:lang "Excel" :algo "= (equal)" :lib "-" :id 17 :doc "" :sig "-"}
-"Excel@textjoin@-" {:lang "Excel" :algo "textjoin" :lib "-" :id 21 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
+"Excel@textjoin²@-" {:lang "Excel" :algo "textjoin²" :lib "-" :id 21 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
 "Excel@transpose@-" {:lang "Excel" :algo "transpose" :lib "-" :id 22 :doc "https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027" :sig "-"}
 "Excel@groupby@-" {:lang "Excel" :algo "groupby" :lib "-" :id 23 :doc "https://support.microsoft.com/en-us/office/groupby-function-5e08ae8c-6800-4b72-b623-c41773611505" :sig "-"}
 "Excel@expand@-" {:lang "Excel" :algo "expand" :lib "-" :id 24 :doc "https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38" :sig "-"}
