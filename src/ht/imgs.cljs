@@ -27,6 +27,7 @@
    "Elm"                  "elm_logo.png"
    "Emacs Lisp"           "emacs_lisp.png"
    "Erlang"               "erlang_logo.png"
+   "Excel"                "excel_logo.png"
    "F#"                   "fsharp_logo.png"
    "Fortran"              "fortran_logo.png"
    "FoxPro"               "foxpro.png"
