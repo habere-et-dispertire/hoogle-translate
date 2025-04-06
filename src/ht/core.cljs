@@ -207,33 +207,179 @@
   [coll elm]
   (some #(= elm %) coll))
 
+(defn is-table-mode? [input]
+  (and (str/includes? input " ")
+       (str/includes? input ",")))
+
+(defn parse-table-mode [input]
+  (let [parts (str/split input #" " 2)]
+    (if (= (count parts) 2)
+      {:lang (first parts)
+       :algos (map str/trim (str/split (second parts) #","))}
+      nil)))
+
+(defn get-algorithm-id [algo]
+  (->> data/by-key-map
+       (filter-by-algo algo)
+       (select-keys data/by-key-map)
+       (vals)
+       (first)
+       (get-id)))
+
+(defn generate-table-mode-row [language-name algo-entries-by-lang algo-ids color-indices]
+  (let [current-theme (@state :theme)
+        colors (get styles/theme-colors current-theme)
+        text-color (:text colors)]
+    [:tr 
+     {:on-click
+      (fn [_] (reset! state {:top-padding "20px"
+                            :theme current-theme
+                            :selection language-name
+                            :how-to-generate-table :by-lang
+                            :results-table (generate-table language-name :by-lang)}))
+      ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
+     
+     ;; Language logo cell
+     [:td {:on-click (fn [e]
+                       (.stopPropagation e)
+                       (reset! state {:top-padding "20px"
+                                     :theme current-theme
+                                     :selection language-name
+                                     :how-to-generate-table :by-lang
+                                     :results-table (generate-table language-name :by-lang)}))}
+      [:img {:src (str/join ["/media/logos/" (get-logo-filename language-name current-theme)]) 
+             :width "40px" 
+             :height "40px"
+             :style {:object-fit "contain"}}]]
+     
+     ;; Language name cell
+     [:td {:style {:padding "12px 30px" :color text-color}
+           :on-click (fn [e]
+                       (.stopPropagation e)
+                       (reset! state {:top-padding "20px"
+                                     :theme current-theme
+                                     :selection language-name
+                                     :how-to-generate-table :by-lang
+                                     :results-table (generate-table language-name :by-lang)}))}
+      language-name]
+     
+     ;; Algorithm cells - one for each algorithm ID
+     (for [[algo-name algo-id color-index] algo-ids]
+       (let [matching-entries (filter #(= algo-id (get-id %)) 
+                                     (get algo-entries-by-lang language-name []))]
+         (if (seq matching-entries)
+           ;; Found algorithm for this language
+           [:td {:style {:padding "12px 30px"
+                         :font-weight "bold"
+                         :background-color (nth excel-colors color-index)}} 
+            (format-algorithm-with-fonts (get-algo (first matching-entries)) language-name)]
+           
+           ;; Algorithm not found for this language
+           [:td {:style {:padding "12px 30px"}} "😢"])))]))
+
+(defn generate-table-mode [table-config]
+  (let [lang (:lang table-config)
+        algo-names (:algos table-config)
+        
+        ;; Get the algorithm IDs for each algorithm name
+        algo-ids-with-names (map (fn [algo-name]
+                                  (let [algo-id (get-algorithm-id algo-name)]
+                                    [algo-name algo-id])) 
+                                algo-names)
+        
+        ;; Get entries for all requested algorithms by ID
+        all-algo-entries (mapcat (fn [[_ algo-id]] 
+                                  (when algo-id
+                                    (->> data/by-key-map
+                                         (filter-by-algo-id algo-id)
+                                         (select-keys data/by-key-map)
+                                         (vals))))
+                                algo-ids-with-names)
+        
+        ;; Group entries by language
+        algo-entries-by-lang (group-by get-lang all-algo-entries)
+        
+        ;; Get all distinct languages that have at least one of the requested algorithms
+        all-languages (->> algo-entries-by-lang
+                          (keys)
+                          (filter #(not= % lang)))  ;; Remove the specified language if it's there
+        
+        ;; Count algorithm occurrence frequencies by ID
+        algo-freq (->> all-algo-entries
+                       (map get-id)
+                       (frequencies))
+        
+        ;; Sort by frequency and assign color indices
+        color-indices (->> algo-freq
+                           (sort-by second >)
+                           (map first)
+                           (map-indexed (fn [i id] [id (min i 6)]))
+                           (into {}))
+        
+        ;; Create algo-ids with colors
+        algo-ids-with-colors (map (fn [[name id]]
+                                   [name id (get color-indices id 0)])
+                                 algo-ids-with-names)
+        
+        ;; Filter languages to only include those that match the specified language
+        filtered-languages (if (and lang (not= lang ""))
+                             (filter #(= (normalize-lang %) (normalize-lang lang)) all-languages)
+                             all-languages)]
+    
+    [:table {:style {:font-family "'JetBrains Mono', monospace"
+                    :padding "12px 12px"
+                    :font-size "20"
+                    :margin-left "auto"
+                    :margin-right "auto"
+                    :text-align "center"}}
+     
+     ;; Table header
+     [:thead
+      [:tr
+       [:th {:style {:padding "12px 20px"}} ""] ;; Logo column
+       [:th {:style {:padding "12px 20px"}} "Language"]
+       (for [[algo-name _ _] algo-ids-with-colors]
+         [:th {:style {:padding "12px 20px"}} algo-name])]]
+     
+     ;; Table body
+     [:tbody
+      (->> all-languages
+           ;; Sort by presence of first algorithm, then alphabetically
+           (sort-by (fn [lang-name]
+                     (let [entries (get algo-entries-by-lang lang-name [])
+                           first-algo-id (second (first algo-ids-with-names))
+                           has-first-algo (some #(= first-algo-id (get-id %)) entries)]
+                       [(if has-first-algo 0 1) lang-name])))
+           (map #(generate-table-mode-row % algo-entries-by-lang algo-ids-with-colors color-indices)))]]))
+
 (defn decide-how [input]
-  (cond 
+  (cond
+    (is-table-mode? input) :table-mode
     (in? (->> imgs/logo-map
               (keys)
               (map str/lower-case))
-         (str/lower-case input)) :by-lang ;; TODO figure out why this lower-case isn't working
+         (str/lower-case input)) :by-lang
     (str/includes? input "->") :by-sig
     (str/includes? input " ")  :by-algo-id
     :else :by-algo))
 
 (defn generate-table [selection how-to-generate-table]
-  [:table {:style {:font-family "'JetBrains Mono', monospace"
+  (if (= how-to-generate-table :table-mode)
+    (generate-table-mode (parse-table-mode selection))
+    [:table {:style {:font-family "'JetBrains Mono', monospace"
                    :padding "12px 12px"
                    :font-size "20" ; this is for the rows
                    :margin-left "auto"
                    :margin-right "auto"
                    :text-align "center"}}
 
-   (->> data/by-key-map
-        ((choose-filter how-to-generate-table) selection)
-        (select-keys data/by-key-map)
-        (vals)
-        (choose-colors how-to-generate-table)
-        (sort-by last)
-        (map (partial apply generate-row)))
-
-  ])
+     (->> data/by-key-map
+          ((choose-filter how-to-generate-table) selection)
+          (select-keys data/by-key-map)
+          (vals)
+          (choose-colors how-to-generate-table)
+          (sort-by last)
+          (map (partial apply generate-row)))]))
 
 (defn social-icon [props]
   [:> SocialIcon (merge {:style (styles/social-icon-style)}
@@ -304,16 +450,21 @@
    (if (= (@state :theme) :light) "🌙 Dark" "☀️ Light")])
 
 (defn perform-search [search-text current-theme]
-  (reset! state {:search-text search-text
-                 :top-padding "20px"
-                 :theme current-theme
-                 :results-table (generate-table (if (and (str/includes? search-text " ")
-                                                         (not (str/includes? search-text "->")))
-                                                  (->> (str/replace search-text " " "@")
-                                                       (get data/by-key-map)
-                                                       (get-id))
-                                                  search-text) 
-                                                (decide-how search-text))}))
+  (let [how-to-generate-table (decide-how search-text)
+        selection (cond
+                   (= how-to-generate-table :table-mode) search-text
+                   (and (str/includes? search-text " ")
+                        (not (str/includes? search-text "->")))
+                   (->> (str/replace search-text " " "@")
+                        (get data/by-key-map)
+                        (get-id))
+                   :else search-text)]
+    (reset! state {:search-text search-text
+                   :top-padding "20px"
+                   :theme current-theme
+                   :selection selection
+                   :how-to-generate-table how-to-generate-table
+                   :results-table (generate-table selection how-to-generate-table)})))
 
 (defn debounced-search [search-text current-theme delay-ms]
   (when @debounce-timer
