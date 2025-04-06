@@ -60,7 +60,7 @@ def generate_clojure_map(data_rows):
         sig = row["sig"] if row["sig"] and row["sig"] != "TODO" else "-"
 
         # Format according to the new file pattern with Language@Algorithm@Library
-        result += f'"{language}@{algo}@{library}" {{:lang "{language}" :algo "{algo}" :lib "{library}" :id {algo_id} :doc "{doc_link}" :sig "{sig}"}}\n'
+        result += f'"{language}@{algo}@{library}@{algo_id}" {{:lang "{language}" :algo "{algo}" :lib "{library}" :id {algo_id} :doc "{doc_link}" :sig "{sig}"}}\n'
 
     result += "})\n"
     return result

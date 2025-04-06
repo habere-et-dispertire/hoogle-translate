@@ -499,9 +499,20 @@
                     (= how-to-generate-table :table-mode) search-text
                     (and (str/includes? search-text " ")
                          (not (str/includes? search-text "->")))
-                    (->> (str/replace search-text " " "@")
-                         (get data/by-key-map)
-                         (get-id))
+                    (let [lang-algo (str/split search-text #" ")
+                          lang (first lang-algo)
+                          algo (second lang-algo)
+                          ;; Find the matching entry by prefix matching on language and algorithm
+                          matching-keys (filter #(and 
+                                                 (str/starts-with? % (str lang "@"))
+                                                 (str/includes? % (str "@" algo "@")))
+                                               (keys data/by-key-map))
+                          matching-key (first matching-keys)]
+                      (if matching-key
+                        (->> matching-key
+                             (get data/by-key-map)
+                             (get-id))
+                        search-text))
                     :else search-text)
          ;; Use parameter to determine whether to reset hidden languages
          existing-hidden-langs (if reset-hidden? #{} (:hidden-langs @state))]
