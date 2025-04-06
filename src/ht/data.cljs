@@ -392,4 +392,17 @@
 "Scala@appendedAll@various" {:lang "Scala" :algo "appendedAll" :lib "various" :id 42 :doc "https://scala-lang.org/api/current/scala/collection/immutable/IndexedSeqOps.html#appendedAll-1dd" :sig "-"}
 "Scala@++@various" {:lang "Scala" :algo "++" :lib "various" :id 42 :doc "https://scala-lang.org/api/current/scala/collection/ArrayOps.html#++-fffff738" :sig "-"}
 "Python@outer@Numpy" {:lang "Python" :algo "outer" :lib "Numpy" :id 6 :doc "https://numpy.org/doc/stable/reference/generated/numpy.outer.html" :sig "-"}
+"Excel@sequence@-" {:lang "Excel" :algo "sequence" :lib "-" :id 8 :doc "https://exceljet.net/functions/sequence-function" :sig "-"}
+"Excel@map@-" {:lang "Excel" :algo "map" :lib "-" :id 2 :doc "https://support.microsoft.com/en-us/office/map-function-48006093-f97c-47c1-bfcc-749263bb1f01" :sig "-"}
+"Excel@reduce@-" {:lang "Excel" :algo "reduce" :lib "-" :id 1 :doc "https://support.microsoft.com/en-us/office/reduce-function-42e39910-b345-45f3-84b8-0642b568b7cb" :sig "-"}
+"Excel@scan@-" {:lang "Excel" :algo "scan" :lib "-" :id 4 :doc "https://support.microsoft.com/en-us/office/scan-function-d58dfd11-9969-4439-b2dc-e7062724de29" :sig "-"}
+"Excel@filter@-" {:lang "Excel" :algo "filter" :lib "-" :id 3 :doc "https://support.microsoft.com/en-us/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759" :sig "-"}
+"Excel@unique@-" {:lang "Excel" :algo "unique" :lib "-" :id 15 :doc "https://support.microsoft.com/en-us/office/unique-function-c5ab87fd-30a3-4ce9-9d1a-40204fb85e1e" :sig "-"}
+"Excel@arraytotext@-" {:lang "Excel" :algo "arraytotext" :lib "-" :id 16 :doc "https://support.microsoft.com/en-us/office/arraytotext-function-9cdcad46-2fa5-4c6b-ac92-14e7bc862b8b" :sig "-"}
+"Excel@textjoin@-" {:lang "Excel" :algo "textjoin" :lib "-" :id 16 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
+"Excel@= (equal)@-" {:lang "Excel" :algo "= (equal)" :lib "-" :id 17 :doc ""<item>=<array>" :sig "-"}
+"Excel@textjoin@-" {:lang "Excel" :algo "textjoin" :lib "-" :id 21 :doc "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c" :sig "-"}
+"Excel@transpose@-" {:lang "Excel" :algo "transpose" :lib "-" :id 22 :doc "https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027" :sig "-"}
+"Excel@groupby@-" {:lang "Excel" :algo "groupby" :lib "-" :id 23 :doc "https://support.microsoft.com/en-us/office/groupby-function-5e08ae8c-6800-4b72-b623-c41773611505" :sig "-"}
+"Excel@expand@-" {:lang "Excel" :algo "expand" :lib "-" :id 24 :doc "https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38" :sig "-"}
 })
