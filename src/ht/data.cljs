@@ -407,4 +407,33 @@
 "Excel@transpose@-" {:lang "Excel" :algo "transpose" :lib "-" :id 22 :doc "https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027" :sig "-"}
 "Excel@groupby@-" {:lang "Excel" :algo "groupby" :lib "-" :id 23 :doc "https://support.microsoft.com/en-us/office/groupby-function-5e08ae8c-6800-4b72-b623-c41773611505" :sig "-"}
 "Excel@expand@-" {:lang "Excel" :algo "expand" :lib "-" :id 24 :doc "https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38" :sig "-"}
+"☾@ſ  (fold)@-" {:lang "☾" :algo "ſ  (fold)" :lib "-" :id 1 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@ᴍ  (map)@-" {:lang "☾" :algo "ᴍ  (map)" :lib "-" :id 2 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󰈲  (filter positive)@-" {:lang "☾" :algo "󰈲  (filter positive)" :lib "-" :id 3 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@Ϝ  (accumulate)@-" {:lang "☾" :algo "Ϝ  (accumulate)" :lib "-" :id 4 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⊞  (table product)@-" {:lang "☾" :algo "⊞  (table product)" :lib "-" :id 6 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⭥  (indicies)@-" {:lang "☾" :algo "⭥  (indicies)" :lib "-" :id 8 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󷸹  (range not right)@-" {:lang "☾" :algo "󷸹  (range not right)" :lib "-" :id 8 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@↨  (enumerate)@-" {:lang "☾" :algo "↨  (enumerate)" :lib "-" :id 9 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@􋇐 (bool groupby)@-" {:lang "☾" :algo "􋇐 (bool groupby)" :lib "-" :id 10 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@ᙧ  (window)@-" {:lang "☾" :algo "ᙧ  (window)" :lib "-" :id 11 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⨝  (join)@-" {:lang "☾" :algo "⨝  (join)" :lib "-" :id 12 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󰒽  (sort decreasing)@-" {:lang "☾" :algo "󰒽  (sort decreasing)" :lib "-" :id 13 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@ᚤ  (unique)@-" {:lang "☾" :algo "ᚤ  (unique)" :lib "-" :id 15 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@ᔐ  (str)@-" {:lang "☾" :algo "ᔐ  (str)" :lib "-" :id 16 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@∈  (left in right)@-" {:lang "☾" :algo "∈  (left in right)" :lib "-" :id 17 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@∋  (right in left)@-" {:lang "☾" :algo "∋  (right in left)" :lib "-" :id 17 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󰈲ᔨ (filter correspondence)@-" {:lang "☾" :algo "󰈲ᔨ (filter correspondence)" :lib "-" :id 18 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⋁  (any)@-" {:lang "☾" :algo "⋁  (any)" :lib "-" :id 20 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⨝  (join)@-" {:lang "☾" :algo "⨝  (join)" :lib "-" :id 21 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⍉  (transpose)@-" {:lang "☾" :algo "⍉  (transpose)" :lib "-" :id 22 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󱑼  (zip)@-" {:lang "☾" :algo "󱑼  (zip)" :lib "-" :id 22 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@  (groupby)@-" {:lang "☾" :algo "  (groupby)" :lib "-" :id 23 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⛶ⁿ  (enlist)@-" {:lang "☾" :algo "⛶ⁿ  (enlist)" :lib "-" :id 25 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@ꟿ  (starmap)@-" {:lang "☾" :algo "ꟿ  (starmap)" :lib "-" :id 30 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⋀  (all)@-" {:lang "☾" :algo "⋀  (all)" :lib "-" :id 31 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@+  (plus)@-" {:lang "☾" :algo "+  (plus)" :lib "-" :id 42 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@󰌷  (chain)@-" {:lang "☾" :algo "󰌷  (chain)" :lib "-" :id 42 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⨉  (cross product)@-" {:lang "☾" :algo "⨉  (cross product)" :lib "-" :id 100 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
+"☾@⪡  (rotate left)@-" {:lang "☾" :algo "⪡  (rotate left)" :lib "-" :id 4104 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
 })
