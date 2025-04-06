@@ -81,6 +81,7 @@
    "SQL"                  "sql_logo.png"
    "Standard ML"          "sml.png"
    "Swift"                "swift_logo.png"
+   "TinyAPL"              "tinyapl.svg"
    "TypeScript"           "ts.png"
    "Uiua"                 "uiua.png"
    "VBA"                  "vba.png"
