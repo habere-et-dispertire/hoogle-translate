@@ -87,6 +87,8 @@
 "Scala@until@Range" {:lang "Scala" :algo "until" :lib "Range" :id 8 :doc "https://scala-lang.org/api/current/scala/collection/immutable/Range.html" :sig "-"}
 "Uiua@⇡ (range)@-" {:lang "Uiua" :algo "⇡ (range)" :lib "-" :id 8 :doc "https://www.uiua.org/docs/range" :sig "-"}
 "D@enumerate@range" {:lang "D" :algo "enumerate" :lib "range" :id 9 :doc "https://dlang.org/library/std/range/enumerate.html" :sig "-"}
+"F#@indexed@various" {:lang "F#" :algo "indexed" :lib "various" :id 9 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#indexed" :sig "-"}
+"Julia@enumerate@Base" {:lang "Julia" :algo "enumerate" :lib "Base" :id 9 :doc "https://docs.julialang.org/en/v1/base/iterators/#Base.Iterators.enumerate" :sig "-"}
 "Python@enumerate@-" {:lang "Python" :algo "enumerate" :lib "-" :id 9 :doc "https://docs.python.org/3/library/functions.html#enumerate" :sig "-"}
 "Racket@enumerate@list-utils" {:lang "Racket" :algo "enumerate" :lib "list-utils" :id 9 :doc "https://docs.racket-lang.org/list-utils/index.html?q=freq#%28def._%28%28lib._list-utils%2Fmain..rkt%29._enumerate%29%29" :sig "-"}
 "Rust@enumerate@trait.Iterator" {:lang "Rust" :algo "enumerate" :lib "trait.Iterator" :id 9 :doc "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.enumerate" :sig "-"}
@@ -281,6 +283,7 @@
 "Haskell@allEqual@Data.List.HT" {:lang "Haskell" :algo "allEqual" :lib "Data.List.HT" :id 51 :doc "https://hackage.haskell.org/package/utility-ht-0.0.15/docs/Data-List-HT.html#v:allEqual" :sig "-"}
 "JavaScript@allEqual@bbo" {:lang "JavaScript" :algo "allEqual" :lib "bbo" :id 51 :doc "https://tnfe.github.io/bbo/#allequal" :sig "-"}
 "C++@rotate@<algorithm>" {:lang "C++" :algo "rotate" :lib "<algorithm>" :id 4104 :doc "https://en.cppreference.com/w/cpp/algorithm/rotate" :sig "-"}
+"F#@permute@various" {:lang "F#" :algo "permute" :lib "various" :id 4104 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#permute" :sig "-"}
 "APL@⌽ (rotate)@" {:lang "APL" :algo "⌽ (rotate)" :lib "" :id 4104 :doc "https://microapl.com/apl_help/ch_020_020_520.htm" :sig "-"}
 "Ruby@rotate@Array" {:lang "Ruby" :algo "rotate" :lib "Array" :id 4104 :doc "https://apidock.com/ruby/v2_5_5/Array/rotate" :sig "-"}
 "Rust@rotate_left@Slice" {:lang "Rust" :algo "rotate_left" :lib "Slice" :id 4104 :doc "https://doc.rust-lang.org/stable/std/primitive.slice.html#method.rotate_left" :sig "-"}
