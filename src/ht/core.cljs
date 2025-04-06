@@ -11,7 +11,8 @@
 
 (defonce state (r/atom {:top-padding "250px"
                         :results-table [:tr]
-                        :theme :light}))
+                        :theme :light
+                        :hidden-langs #{}}))
 
 (defonce debug (r/atom {:info ""}))
 
@@ -87,7 +88,7 @@
 
 (def tr-hover-style {::stylefy/mode {:hover {:background-color "purple"}}})
 
-(declare generate-table)
+(declare generate-table perform-search)
 
 (def excel-colors ["#CC99FF" "#99CCFF" "#CCFFCC" ;"#CCFFFF"
                    "#FFFF99" "#FFCC99" "#FF99CC" "white"]) 
@@ -128,11 +129,25 @@
         lang (get info-map :lang)]
     [:tr 
      {:on-click
-      (fn [_] ((reset! state {:top-padding "20px"
-                              :theme current-theme
-                              :selection (get info-map :id)
-                              :how-to-generate-table :by-algo-id
-                              :results-table (generate-table (get info-map :id) :by-algo-id)})))
+      (fn [e] 
+        (if (.-ctrlKey e)
+          ;; If Ctrl key is pressed, add language to hidden-langs
+          (do
+            (.stopPropagation e)
+            (swap! state update :hidden-langs conj lang)
+            ;; Re-generate the whole table with updated frequencies
+            (let [current-state @state
+                  selection (or (:selection current-state) (:search-text current-state))
+                  how-to-generate-table (:how-to-generate-table current-state)]
+              (swap! state assoc :results-table 
+                     (generate-table selection how-to-generate-table))))
+          ;; Regular click behavior
+          (reset! state {:top-padding "20px"
+                        :theme current-theme
+                        :hidden-langs (:hidden-langs @state)
+                        :selection (get info-map :id)
+                        :how-to-generate-table :by-algo-id
+                        :results-table (generate-table (get info-map :id) :by-algo-id)})))
       ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
      [:td {:on-click (fn [e]
                        (.stopPropagation e)
@@ -232,11 +247,25 @@
         text-color (:text colors)]
     [:tr 
      {:on-click
-      (fn [_] (reset! state {:top-padding "20px"
-                            :theme current-theme
-                            :selection language-name
-                            :how-to-generate-table :by-lang
-                            :results-table (generate-table language-name :by-lang)}))
+      (fn [e] 
+        (if (.-ctrlKey e)
+          ;; If Ctrl key is pressed, add language to hidden-langs
+          (do
+            (.stopPropagation e)
+            (swap! state update :hidden-langs conj language-name)
+            ;; Re-generate the whole table with updated frequencies
+            (let [current-state @state
+                  selection (or (:selection current-state) (:search-text current-state))
+                  how-to-generate-table (:how-to-generate-table current-state)]
+              (swap! state assoc :results-table 
+                     (generate-table selection how-to-generate-table))))
+          ;; Regular click behavior
+          (reset! state {:top-padding "20px"
+                        :theme current-theme
+                        :hidden-langs (:hidden-langs @state)
+                        :selection language-name
+                        :how-to-generate-table :by-lang
+                        :results-table (generate-table language-name :by-lang)})))
       ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
      
      ;; Language logo cell
@@ -282,6 +311,7 @@
 (defn generate-table-mode [table-config]
   (let [lang (:lang table-config)
         algo-names (:algos table-config)
+        hidden-langs (:hidden-langs @state)
         
         ;; Get the algorithm IDs for each algorithm name
         algo-ids-with-names (map (fn [algo-name]
@@ -303,11 +333,16 @@
         
         ;; Get all distinct languages that have at least one of the requested algorithms
         all-languages (->> algo-entries-by-lang
-                          (keys)
-                          (filter #(not= % lang)))  ;; Remove the specified language if it's there
+                          (keys))
         
-        ;; Count algorithm occurrence frequencies by ID
-        algo-freq (->> all-algo-entries
+        ;; Filter out hidden languages
+        filtered-languages (remove #(contains? hidden-langs %) all-languages)
+        
+        ;; Filter entries to only include non-hidden languages
+        filtered-entries (filter #(not (contains? hidden-langs (get-lang %))) all-algo-entries)
+        
+        ;; Count algorithm occurrence frequencies by ID using only visible languages
+        algo-freq (->> filtered-entries
                        (map get-algo)
                        (map normalize-algo)
                        (frequencies))
@@ -322,12 +357,7 @@
         ;; Create algo-ids with colors
         algo-ids-with-colors (map (fn [[name id]]
                                    [name id (get color-indices (normalize-algo name))])
-                                 algo-ids-with-names)
-        
-        ;; Filter languages to only include those that match the specified language
-        filtered-languages (if (and lang (not= lang ""))
-                             (filter #(= (normalize-lang %) (normalize-lang lang)) all-languages)
-                             all-languages)]
+                                 algo-ids-with-names)]
     
     ;; (swap! debug assoc :info (str "Color indices: " (pr-str color-indices)))
     
@@ -340,7 +370,7 @@
      
      ;; Table body
      [:tbody
-      (->> all-languages
+      (->> filtered-languages
            ;; Sort by algorithm frequency instead of by language name
            (sort-by (fn [lang-name]
                      (let [entries (get algo-entries-by-lang lang-name [])
@@ -384,6 +414,8 @@
           ((choose-filter how-to-generate-table) selection)
           (select-keys data/by-key-map)
           (vals)
+          ;; Filter out hidden languages
+          (remove #(contains? (:hidden-langs @state) (get-lang %)))
           (choose-colors how-to-generate-table)
           (sort-by last)
           (map (partial apply generate-row)))]))
@@ -448,6 +480,7 @@
                                     :theme new-theme
                                     :selection selection
                                     :search-text (:search-text current-state)
+                                    :hidden-langs #{}
                                     :how-to-generate-table how-to-generate-table
                                     :results-table (when (and selection how-to-generate-table)
                                                     (generate-table selection how-to-generate-table))}))
@@ -456,22 +489,28 @@
                  (update-body-styles new-theme))}
    (if (= (@state :theme) :light) "🌙 Dark" "☀️ Light")])
 
-(defn perform-search [search-text current-theme]
-  (let [how-to-generate-table (decide-how search-text)
-        selection (cond
-                   (= how-to-generate-table :table-mode) search-text
-                   (and (str/includes? search-text " ")
-                        (not (str/includes? search-text "->")))
-                   (->> (str/replace search-text " " "@")
-                        (get data/by-key-map)
-                        (get-id))
-                   :else search-text)]
-    (reset! state {:search-text search-text
-                   :top-padding "20px"
-                   :theme current-theme
-                   :selection selection
-                   :how-to-generate-table how-to-generate-table
-                   :results-table (generate-table selection how-to-generate-table)})))
+(defn perform-search 
+  ([search-text current-theme]
+   (perform-search search-text current-theme false))
+  ([search-text current-theme reset-hidden?]
+   (let [how-to-generate-table (decide-how search-text)
+         selection (cond
+                    (= how-to-generate-table :table-mode) search-text
+                    (and (str/includes? search-text " ")
+                         (not (str/includes? search-text "->")))
+                    (->> (str/replace search-text " " "@")
+                         (get data/by-key-map)
+                         (get-id))
+                    :else search-text)
+         ;; Use parameter to determine whether to reset hidden languages
+         existing-hidden-langs (if reset-hidden? #{} (:hidden-langs @state))]
+     (reset! state {:search-text search-text
+                    :top-padding "20px"
+                    :theme current-theme
+                    :selection selection
+                    :hidden-langs existing-hidden-langs
+                    :how-to-generate-table how-to-generate-table
+                    :results-table (generate-table selection how-to-generate-table)}))))
 
 (defn debounced-search [search-text current-theme delay-ms]
   (when @debounce-timer
@@ -509,7 +548,7 @@
        :on-key-press
        (fn [e]
          (if (= (.-key e) "Enter")
-           (perform-search (.. e -target -value) current-theme)
+           (perform-search (.. e -target -value) current-theme true)
            (.log js/console "Not Enter")))}]
      [:br]
      [:br]
