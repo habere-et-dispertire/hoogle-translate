@@ -408,5 +408,32 @@
 |   Excel     |           `transpose`        |   22   |         `-`             |                                   [doc](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)    |
 |   Excel     |           `groupby`          |   23   |         `-`             |                                   [doc](https://support.microsoft.com/en-us/office/groupby-function-5e08ae8c-6800-4b72-b623-c41773611505)      |
 |   Excel     |           `expand`           |   24   |         `-`             |                                   [doc](https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38)       |
-
-
+|      ☾      |             `ſ`              |   1    | `fold`                  | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `ᴍ`              |   2    | `map`                   | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󰈲`              |   3    | `filter positive`       | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `Ϝ`              |   4    | `accumulate`            | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⊞`              |   6    | `table product`         | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⭥`              |   8    | `indicies`              | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󷸹`              |   8    | `range not right`       | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `↨`              |   9    | `enumerate`             | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `􋇐`             |   10   | `bool groupby`          | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `ᙧ`              |   11   | `window`                | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⨝`              |   12   | `join`                  | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󰒽`              |   13   | `sort decreasing`       | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `ᚤ`              |   15   | `unique`                | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `ᔐ`              |   16   | `str`                   | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `∈`              |   17   | `left in right`         | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `∋`              |   17   | `right in left`         | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󰈲ᔨ`             |   18   | `filter correspondence` | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⋁`              |   20   | `any`                   | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⨝`              |   21   | `join`                  | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⍉`              |   22   | `transpose`             | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󱑼`              |   22   | `zip`                   | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             ``              |   23   | `groupby`               | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |            `⛶ⁿ`              |   25   | `enlist`                | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `ꟿ`              |   30   | `starmap`               | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⋀`              |   31   | `all`                   | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `+`              |   42   | `plus`                  | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `󰌷`              |   42   | `chain`                 | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⨉`              |  100   | `cross product`         | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
+|      ☾      |             `⪡`              |  4104  | `rotate left`           | [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                      |
