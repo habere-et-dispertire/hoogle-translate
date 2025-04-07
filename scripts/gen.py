@@ -49,7 +49,7 @@ def parse_md_table(content):
 
 def generate_clojure_map(data_rows):
     """Generate a Clojure map from the parsed data."""
-    result = "(ns ht.data)\n\n(def by-key-map\n  {\n"
+    result = "(ns data)\n\n(def by-key-map\n  {\n"
 
     for row in data_rows:
         language = row["language"]
@@ -70,7 +70,7 @@ def main():
     # Get the root directory of the project (parent of scripts directory)
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     algorithms_path = os.path.join(root_dir, "ALGORITHMS.md")
-    output_path = os.path.join(root_dir, "src", "ht", "data.cljs")
+    output_path = os.path.join(root_dir, "src", "data.cljs")
 
     # Read ALGORITHMS.md file from root directory
     with open(algorithms_path, encoding="utf-8") as file:

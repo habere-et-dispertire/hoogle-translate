@@ -1,12 +1,12 @@
-(ns ht.core
+(ns core
   (:require
    [reagent.dom :as rdom]
    [reagent.core :as r]
    [clojure.string :as str]
    [stylefy.core :as stylefy]
-   [ht.styles :as styles]
-   [ht.data :as data]
-   [ht.imgs :as imgs]
+   [styles :as styles]
+   [data :as data]
+   [imgs :as imgs]
    ["react-social-icons" :refer [SocialIcon]]))
 
 (defonce state (r/atom {:top-padding "250px"

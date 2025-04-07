@@ -1,4 +1,4 @@
-(ns ht.imgs)
+(ns imgs)
 
 (def logo-map
   {"Ada"                  "ada.png"

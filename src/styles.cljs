@@ -1,4 +1,4 @@
-(ns ht.styles)
+(ns styles)
 
 (defn font [font-size]
   {:style {:font-family "JetBrains Mono, monospace"
