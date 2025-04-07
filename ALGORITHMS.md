@@ -459,4 +459,11 @@
 |   TinyAPL   |          `¨ (each)`          |   30   |           `-`           |                                            [doc](https://tinyapl.rubenverg.com/docs/primitive/each)                                            |
 |   TinyAPL   |        `⍪ (catenate)`        |   42   |           `-`           |                                          [doc](https://tinyapl.rubenverg.com/docs/primitive/catenate)                                          |
 |   TinyAPL   |         `⊖ (rotate)`         |  4104  |           `-`           |                                           [doc](https://tinyapl.rubenverg.com/docs/primitive/rotate)                                           |
-
+|     C++     |           `chunk`            |   11   |       `<ranges>`        |                                           [doc](https://en.cppreference.com/w/cpp/ranges/chunk_view)                                           |
+|   Haskell   |          `chunksOf`          |   11   |    `Data.List.Split`    |                          [doc](https://hackage.haskell.org/package/split-0.2.5/docs/Data-List-Split.html#v:chunksOf)                           |
+|      D      |           `chunks`           |   11   |       `std.range`       |                                            [doc](https://dlang.org/library/std/range/chunks.html#0)                                            |
+|    Rust     |           `chunks`           |   11   |       `itertools`       |                              [doc](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.chunks)                              |
+|   Kotlin    |          `chunked`           |   11   |      `collections`      |                              [doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/chunked.html)                               |
+|      D      |           `slide`            |   27   |       `std.range`       |                                             [doc](https://dlang.org/library/std/range/slide.html)                                              |
+|     Kap     |         `/ (reduce)`         |   1    |           `-`           |                                       [doc](https://kapdemo.dhsdevelopments.com/reference.html#_reduce)                                        |
+|     Kap     |         `\\ (scan)`          |   4    |           `-`           |                                         [doc](https://kapdemo.dhsdevelopments.com/reference.html#scan)                                         |
