@@ -500,25 +500,30 @@
                      top-padding (:top-padding current-state)]
                  ;; Save theme to localStorage
                  (save-theme-to-storage new-theme)
+                 ;; Update body styles with new theme
+                 (update-body-styles new-theme)
                  ;; If there are search results showing, regenerate the table
                  (if (= top-padding "20px")
-                   (let [selection (or (:selection current-state) (:search-text current-state))
-                         how-to-generate-table (or (:how-to-generate-table current-state) 
-                                                  (when selection (decide-how selection)))]
+                   (let [search-text (:search-text current-state)
+                         selection (:selection current-state)
+                         how-to-generate-table (:how-to-generate-table current-state)]
+                     ;; Force a complete re-render of the table with the new theme
                      (reset! state (merge @state 
-                                       {:search-text selection
+                                       {:search-text search-text
                                         :top-padding top-padding
                                         :theme new-theme
-                                        :hidden-langs #{}
+                                        :selection selection
+                                        :hidden-langs (:hidden-langs current-state)
                                         :settings-open (:settings-open current-state)
                                         :show-expressions (:show-expressions current-state)
                                         :show-libraries (:show-libraries current-state)
-                                        :how-to-generate-table how-to-generate-table
-                                        :results-table (when (and selection how-to-generate-table)
-                                                        (generate-table selection how-to-generate-table))}))
+                                        :how-to-generate-table how-to-generate-table}))
+                     ;; Update the results table after the state has been updated with the new theme
+                     (when (and selection how-to-generate-table)
+                       (swap! state assoc :results-table
+                              (generate-table selection how-to-generate-table))))
                    ;; Otherwise just update the theme
-                   (reset! state (assoc current-state :theme new-theme)))
-                 (update-body-styles new-theme)))}
+                   (reset! state (assoc current-state :theme new-theme))))}
    (if (= (@state :theme) :light) "🌙 Dark" "☀️ Light")])
 
 (defn settings-toggle []
