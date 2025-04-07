@@ -40,7 +40,7 @@
 "Uiua@≡ (rows)@-@2" {:lang "Uiua" :algo "≡ (rows)" :lib "-" :id 2 :doc "https://www.uiua.org/docs/rows" :sig "-"}
 "APL@/ (compress)@-@3" {:lang "APL" :algo "/ (compress)" :lib "-" :id 3 :doc "http://microapl.com/apl_help/ch_020_020_840.htm" :sig "-"}
 "Haskell@filter@Data.List@3" {:lang "Haskell" :algo "filter" :lib "Data.List" :id 3 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:filter" :sig "-"}
-"Uiua@▽ (keep)@-@3" {:lang "Uiua" :algo "▽ (keep)" :lib "-" :id 3 :doc "https://www.uiua.org/docs/keep" :sig "-"}
+"Uiua@▽ (keep)@-@25" {:lang "Uiua" :algo "▽ (keep)" :lib "-" :id 25 :doc "https://www.uiua.org/docs/keep" :sig "-"}
 "J@\\ (prefix)@-@4" {:lang "J" :algo "\\ (prefix)" :lib "-" :id 4 :doc "https://code.jsoftware.com/wiki/Vocabulary/bslash" :sig "-"}
 "APL@\\ (scan)@-@4" {:lang "APL" :algo "\\ (scan)" :lib "-" :id 4 :doc "http://microapl.com/apl_help/ch_020_020_820.htm" :sig "-"}
 "Python@accumulate@itertools@4" {:lang "Python" :algo "accumulate" :lib "itertools" :id 4 :doc "https://docs.python.org/3/library/itertools.html#itertools.accumulate" :sig "-"}
@@ -395,7 +395,7 @@
 "Scala@tabulate@various@25" {:lang "Scala" :algo "tabulate" :lib "various" :id 25 :doc "https://scala-lang.org/api/current/scala/Array$.html#tabulate-fffffde9" :sig "-"}
 "Scala@appendedAll@various@42" {:lang "Scala" :algo "appendedAll" :lib "various" :id 42 :doc "https://scala-lang.org/api/current/scala/collection/immutable/IndexedSeqOps.html#appendedAll-1dd" :sig "-"}
 "Scala@++@various@42" {:lang "Scala" :algo "++" :lib "various" :id 42 :doc "https://scala-lang.org/api/current/scala/collection/ArrayOps.html#++-fffff738" :sig "-"}
-"Python@outer@Numpy@6" {:lang "Python" :algo "outer" :lib "Numpy" :id 6 :doc "https://numpy.org/doc/stable/reference/generated/numpy.outer.html" :sig "-"}
+"Python@outer@NumPy@6" {:lang "Python" :algo "outer" :lib "NumPy" :id 6 :doc "https://numpy.org/doc/stable/reference/generated/numpy.outer.html" :sig "-"}
 "Excel@sequence@-@8" {:lang "Excel" :algo "sequence" :lib "-" :id 8 :doc "https://exceljet.net/functions/sequence-function" :sig "-"}
 "Excel@map@-@2" {:lang "Excel" :algo "map" :lib "-" :id 2 :doc "https://support.microsoft.com/en-us/office/map-function-48006093-f97c-47c1-bfcc-749263bb1f01" :sig "-"}
 "Excel@reduce@-@1" {:lang "Excel" :algo "reduce" :lib "-" :id 1 :doc "https://support.microsoft.com/en-us/office/reduce-function-42e39910-b345-45f3-84b8-0642b568b7cb" :sig "-"}
@@ -440,7 +440,6 @@
 "☾@⪡  (rotate left)@-@4104" {:lang "☾" :algo "⪡  (rotate left)" :lib "-" :id 4104 :doc "https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE" :sig "-"}
 "TinyAPL@/ (reduce)@-@1" {:lang "TinyAPL" :algo "/ (reduce)" :lib "-" :id 1 :doc "https://tinyapl.rubenverg.com/docs/primitive/reduce" :sig "-"}
 "TinyAPL@¨ (each)@-@2" {:lang "TinyAPL" :algo "¨ (each)" :lib "-" :id 2 :doc "https://tinyapl.rubenverg.com/docs/primitive/each" :sig "-"}
-"TinyAPL@⌿ (replicate)@-@3" {:lang "TinyAPL" :algo "⌿ (replicate)" :lib "-" :id 3 :doc "https://tinyapl.rubenverg.com/docs/primitive/replicate" :sig "-"}
 "TinyAPL@↟ (on prefixes)@-@4" {:lang "TinyAPL" :algo "↟ (on prefixes)" :lib "-" :id 4 :doc "https://tinyapl.rubenverg.com/docs/primitive/on_prefixes" :sig "-"}
 "TinyAPL@↡ (on infixes)@-@5" {:lang "TinyAPL" :algo "↡ (on infixes)" :lib "-" :id 5 :doc "https://tinyapl.rubenverg.com/docs/primitive/on_infixes" :sig "-"}
 "TinyAPL@⊞ (table)@-@6" {:lang "TinyAPL" :algo "⊞ (table)" :lib "-" :id 6 :doc "https://tinyapl.rubenverg.com/docs/primitive/table" :sig "-"}
@@ -468,4 +467,6 @@
 "Kap@∪ (unique)@-@15" {:lang "Kap" :algo "∪ (unique)" :lib "-" :id 15 :doc "" :sig "-"}
 "APL@∪ (unique)@-@15" {:lang "APL" :algo "∪ (unique)" :lib "-" :id 15 :doc "https://aplwiki.com/wiki/Unique" :sig "-"}
 "J@~. (nub)@-@15" {:lang "J" :algo "~. (nub)" :lib "-" :id 15 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildedot" :sig "-"}
+"Swift@reductions@Algorithms@4" {:lang "Swift" :algo "reductions" :lib "Algorithms" :id 4 :doc "https://swiftpackageindex.com/apple/swift-algorithms/main/documentation/algorithms/swift/sequence/reductions(_:)" :sig "-"}
+"J@# (copy)@-@25" {:lang "J" :algo "# (copy)" :lib "-" :id 25 :doc "https://code.jsoftware.com/wiki/Vocabulary/number#dyadic" :sig "-"}
 })
