@@ -458,4 +458,12 @@
 "TinyAPL@¨ (each)@-@30" {:lang "TinyAPL" :algo "¨ (each)" :lib "-" :id 30 :doc "https://tinyapl.rubenverg.com/docs/primitive/each" :sig "-"}
 "TinyAPL@⍪ (catenate)@-@42" {:lang "TinyAPL" :algo "⍪ (catenate)" :lib "-" :id 42 :doc "https://tinyapl.rubenverg.com/docs/primitive/catenate" :sig "-"}
 "TinyAPL@⊖ (rotate)@-@4104" {:lang "TinyAPL" :algo "⊖ (rotate)" :lib "-" :id 4104 :doc "https://tinyapl.rubenverg.com/docs/primitive/rotate" :sig "-"}
+"C++@chunk@<ranges>@11" {:lang "C++" :algo "chunk" :lib "<ranges>" :id 11 :doc "https://en.cppreference.com/w/cpp/ranges/chunk_view" :sig "-"}
+"Haskell@chunksOf@Data.List.Split@11" {:lang "Haskell" :algo "chunksOf" :lib "Data.List.Split" :id 11 :doc "https://hackage.haskell.org/package/split-0.2.5/docs/Data-List-Split.html#v:chunksOf" :sig "-"}
+"D@chunks@std.range@11" {:lang "D" :algo "chunks" :lib "std.range" :id 11 :doc "https://dlang.org/library/std/range/chunks.html#0" :sig "-"}
+"Rust@chunks@itertools@11" {:lang "Rust" :algo "chunks" :lib "itertools" :id 11 :doc "https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.chunks" :sig "-"}
+"Kotlin@chunked@collections@11" {:lang "Kotlin" :algo "chunked" :lib "collections" :id 11 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/chunked.html" :sig "-"}
+"D@slide@std.range@27" {:lang "D" :algo "slide" :lib "std.range" :id 27 :doc "https://dlang.org/library/std/range/slide.html" :sig "-"}
+"Kap@/ (reduce)@-@1" {:lang "Kap" :algo "/ (reduce)" :lib "-" :id 1 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_reduce" :sig "-"}
+"Kap@\\ (scan)@-@4" {:lang "Kap" :algo "\\ (scan)" :lib "-" :id 4 :doc "https://kapdemo.dhsdevelopments.com/reference.html#scan" :sig "-"}
 })
