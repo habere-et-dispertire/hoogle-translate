@@ -29,7 +29,7 @@ def parse_md_table(content):
             algo_id = columns[2]
             library = columns[3].replace("`", "")
             expr = "true" if columns[4] == "Y" else "false"
-            doc_link = columns[5][6:-1] if len(columns) > 4 else ""
+            doc_link = columns[5][6:-1] if len(columns) > 5 else ""
 
             # Add to data rows
             data_rows.append(
