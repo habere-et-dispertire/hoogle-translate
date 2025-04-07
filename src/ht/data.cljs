@@ -146,7 +146,7 @@
 "Elixir@member?@Enum@17" {:lang "Elixir" :algo "member?" :lib "Enum" :id 17 :doc "https://hexdocs.pm/elixir/Enum.html#member?/2" :sig "-"}
 "Uiua@∊ (memberof)@-@17" {:lang "Uiua" :algo "∊ (memberof)" :lib "-" :id 17 :doc "http://uiua.org/docs/memberof" :sig "-"}
 "APL@⍸ (where)@-@18" {:lang "APL" :algo "⍸ (where)" :lib "-" :id 18 :doc "https://help.dyalog.com/17.1/#Language/Primitive%20Functions/Where.htm#kanchor3608" :sig "-"}
-"F#@where@various@18" {:lang "F#" :algo "where" :lib "various" :id 18 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#where" :sig "-"}
+"F#@where@various@3" {:lang "F#" :algo "where" :lib "various" :id 3 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#where" :sig "-"}
 "q@where@-@18" {:lang "q" :algo "where" :lib "-" :id 18 :doc "https://code.kx.com/q4m3/A_Built-in_Functions/#a107-where" :sig "-"}
 "Haskell@count@Data.List.Unique@19" {:lang "Haskell" :algo "count" :lib "Data.List.Unique" :id 19 :doc "https://hackage.haskell.org/package/Unique-0.4.7.7/docs/Data-List-Unique.html#v:count" :sig "-"}
 "Python@Counter*@collections@19" {:lang "Python" :algo "Counter*" :lib "collections" :id 19 :doc "https://docs.python.org/3/library/collections.html#collections.Counter" :sig "-"}
@@ -465,4 +465,7 @@
 "D@slide@std.range@27" {:lang "D" :algo "slide" :lib "std.range" :id 27 :doc "https://dlang.org/library/std/range/slide.html" :sig "-"}
 "Kap@/ (reduce)@-@1" {:lang "Kap" :algo "/ (reduce)" :lib "-" :id 1 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_reduce" :sig "-"}
 "Kap@\\ (scan)@-@4" {:lang "Kap" :algo "\\ (scan)" :lib "-" :id 4 :doc "https://kapdemo.dhsdevelopments.com/reference.html#scan" :sig "-"}
+"Kap@∪ (unique)@-@15" {:lang "Kap" :algo "∪ (unique)" :lib "-" :id 15 :doc "" :sig "-"}
+"APL@∪ (unique)@-@15" {:lang "APL" :algo "∪ (unique)" :lib "-" :id 15 :doc "https://aplwiki.com/wiki/Unique" :sig "-"}
+"J@~. (nub)@-@15" {:lang "J" :algo "~. (nub)" :lib "-" :id 15 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildedot" :sig "-"}
 })
