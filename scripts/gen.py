@@ -82,7 +82,7 @@ def main():
     # Generate the Clojure map
     clojure_map = generate_clojure_map(data_rows)
 
-    # Write to data.cljs in src/ht directory
+    # Write to data.cljs in src directory
     with open(output_path, "w", encoding="utf-8") as outfile:
         outfile.write(clojure_map)
 

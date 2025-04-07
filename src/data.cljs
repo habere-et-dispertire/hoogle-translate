@@ -1,4 +1,4 @@
-(ns ht.data)
+(ns data)
 
 (def by-key-map
   {
