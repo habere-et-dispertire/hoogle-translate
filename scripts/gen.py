@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import re
 
 
 def parse_md_table(content):
@@ -15,12 +16,11 @@ def parse_md_table(content):
         if not line or line.startswith("| :") or line.startswith("|  Language"):
             continue
 
-        if "J" in line:
-            if "rotate" in line or "transpose" in line:
-                continue  # TODO fix this
-
-        # Extract columns
-        columns = [col.strip() for col in line.split("|")][1:-1]
+        # Handle escaped pipe characters
+        temp_placeholder = "ESCAPED_PIPE_PLACEHOLDER"
+        line_with_placeholders = line.replace("\\|", temp_placeholder)
+        raw_columns = line_with_placeholders.split("|")[1:-1]
+        columns = [col.strip().replace(temp_placeholder, "|") for col in raw_columns]
 
         if len(columns) >= 5:  # Ensure we have enough columns
             # Language, Algorithm, ID, Doc Link, Library
