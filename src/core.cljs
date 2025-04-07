@@ -106,7 +106,7 @@
     "Uiua" "'Uiua386', monospace"
     "'JetBrains Mono', monospace"))
 
-(def third-party-libraries ["Thrust" "RAPIDS cuDF" "pandas" "NumPy" "range-v3" "core.matrix"])
+(def third-party-libraries ["RAPIDS cuDF" "pandas" "NumPy" "range-v3" "core.matrix"])
 
 (defn maybe-filter-third-party-libraries [coll]
   (filter (fn [item]
@@ -219,6 +219,7 @@
                            get (->> (map get-algo rows-info)
                                     (map normalize-algo)
                                     (frequencies)
+                                    (#(if (contains? % "") (assoc % "" 0) %))
                                     (into (vector))
                                     (sort-by last >)
                                     (map-indexed (fn [i [algo _]] [algo (min i 6)]))
@@ -360,8 +361,7 @@
         algo-entries-by-lang (group-by get-lang all-algo-entries)
         
         ;; Get all distinct languages that have at least one of the requested algorithms
-        all-languages (->> algo-entries-by-lang
-                          (keys))
+        all-languages (keys algo-entries-by-lang)
         
         ;; Filter out hidden languages
         filtered-languages (remove #(contains? hidden-langs %) all-languages)
@@ -373,7 +373,8 @@
         algo-freq (->> filtered-entries
                        (map get-algo)
                        (map normalize-algo)
-                       (frequencies))
+                       (frequencies)
+                       (#(if (contains? % "") (assoc % "" 0) %)))
         
         ;; Sort by frequency and assign color indices
         color-indices (->> algo-freq
