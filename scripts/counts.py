@@ -246,12 +246,9 @@ def create_bar_chart_with_logos(counts, root_dir):
     plt.subplots_adjust(top=0.95)  # Increased from 0.85 to 0.95 to reduce space
 
     # Save the chart
-    output_path = os.path.join(root_dir, "language_counts_with_logos.png")
+    output_path = os.path.join(root_dir, "scripts", "language_counts.png")
     plt.savefig(output_path, dpi=300)
     print(f"Bar chart saved as '{output_path}'")
-
-    # Show the chart
-    plt.show()
 
 
 if __name__ == "__main__":
