@@ -469,3 +469,4 @@
 |     Kap     |         `∪ (unique)`         |   15   |           `-`           |                                                                                                                                                |
 |     APL     |         `∪ (unique)`         |   15   |           `-`           |                                                     [doc](https://aplwiki.com/wiki/Unique)                                                     |
 |      J      |          `~. (nub)`          |   15   |           `-`           |                                           [doc](https://code.jsoftware.com/wiki/Vocabulary/tildedot)                                           |
+|    Swift    |         `reductions`         |   4    |      `Algorithms`       |            [doc](https://swiftpackageindex.com/apple/swift-algorithms/main/documentation/algorithms/swift/sequence/reductions(_:))             |
