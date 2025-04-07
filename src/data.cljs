@@ -473,4 +473,57 @@
 "J@~. (nub)@-@15" {:lang "J" :algo "~. (nub)" :lib "-" :id 15 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildedot" :sig "-" :expr false}
 "Swift@reductions@Algorithms@4" {:lang "Swift" :algo "reductions" :lib "Algorithms" :id 4 :doc "https://swiftpackageindex.com/apple/swift-algorithms/main/documentation/algorithms/swift/sequence/reductions(_:)" :sig "-" :expr false}
 "J@# (copy)@-@25" {:lang "J" :algo "# (copy)" :lib "-" :id 25 :doc "https://code.jsoftware.com/wiki/Vocabulary/number#dyadic" :sig "-" :expr false}
+"APL@⊢ (same)@-@5090" {:lang "APL" :algo "⊢ (same)" :lib "-" :id 5090 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Same.htm" :sig "-" :expr false}
+"TinyAPL@⊢ (same)@-@5090" {:lang "TinyAPL" :algo "⊢ (same)" :lib "-" :id 5090 :doc "https://tinyapl.rubenverg.com/docs/primitive/right" :sig "-" :expr false}
+"Kap@⊢ (identity)@-@5090" {:lang "Kap" :algo "⊢ (identity)" :lib "-" :id 5090 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_identityright" :sig "-" :expr false}
+"J@] (same)@-@5090" {:lang "J" :algo "] (same)" :lib "-" :id 5090 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarert" :sig "-" :expr false}
+"BQN@⊢ (right)@-@5090" {:lang "BQN" :algo "⊢ (right)" :lib "-" :id 5090 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"APL@⊢ (right)@-@5111" {:lang "APL" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Right.htm" :sig "-" :expr false}
+"TinyAPL@⊢ (right)@-@5111" {:lang "TinyAPL" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://tinyapl.rubenverg.com/docs/primitive/right" :sig "-" :expr false}
+"Kap@⊢ (right)@-@5111" {:lang "Kap" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_identityright" :sig "-" :expr false}
+"J@] (right)@-@5111" {:lang "J" :algo "] (right)" :lib "-" :id 5111 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarert#dyadic" :sig "-" :expr false}
+"BQN@⊢ (right)@-@5111" {:lang "BQN" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"APL@⊣ (left)@-@5110" {:lang "APL" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Left.htm" :sig "-" :expr false}
+"TinyAPL@⊣ (left)@-@5110" {:lang "TinyAPL" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://tinyapl.rubenverg.com/docs/primitive/left" :sig "-" :expr false}
+"Kap@⊣ (left)@-@5110" {:lang "Kap" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_hideleft" :sig "-" :expr false}
+"J@[ (left)@-@5110" {:lang "J" :algo "[ (left)" :lib "-" :id 5110 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarelt" :sig "-" :expr false}
+"BQN@⊣ (left)@-@5110" {:lang "BQN" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"APL@⍨ (duplicate)@-@5230" {:lang "APL" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://help.dyalog.com/latest/index.htm#Language/Primitive%20Operators/Commute.htm" :sig "-" :expr false}
+"TinyAPL@⍨ (duplicate)@-@5230" {:lang "TinyAPL" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://tinyapl.rubenverg.com/docs/primitive/duplicate" :sig "-" :expr false}
+"Kap@⍨ (duplicate)@-@5230" {:lang "Kap" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate" :sig "-" :expr false}
+"J@~ (reflex)@-@5230" {:lang "J" :algo "~ (reflex)" :lib "-" :id 5230 :doc "https://code.jsoftware.com/wiki/Vocabulary/tilde" :sig "-" :expr false}
+"BQN@˜ (self)@-@5230" {:lang "BQN" :algo "˜ (self)" :lib "-" :id 5230 :doc "https://mlochbaum.github.io/BQN/doc/swap.html" :sig "-" :expr false}
+"APL@⍨ (commute)@-@5030" {:lang "APL" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Commute.htm" :sig "-" :expr false}
+"TinyAPL@⍨ (commute)@-@5030" {:lang "TinyAPL" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://tinyapl.rubenverg.com/docs/primitive/commute" :sig "-" :expr false}
+"Kap@⍨ (commute)@-@5030" {:lang "Kap" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate" :sig "-" :expr false}
+"J@~ (passive)@-@5030" {:lang "J" :algo "~ (passive)" :lib "-" :id 5030 :doc "https://code.jsoftware.com/wiki/Vocabulary/tilde#dyadic" :sig "-" :expr false}
+"BQN@˜ (swap)@-@5030" {:lang "BQN" :algo "˜ (swap)" :lib "-" :id 5030 :doc "https://mlochbaum.github.io/BQN/doc/swap.html" :sig "-" :expr false}
+"APL@∘ (compose)@-@5020" {:lang "APL" :algo "∘ (compose)" :lib "-" :id 5020 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Beside.htm" :sig "-" :expr false}
+"TinyAPL@∘ (after)@-@5020" {:lang "TinyAPL" :algo "∘ (after)" :lib "-" :id 5020 :doc "https://tinyapl.rubenverg.com/docs/primitive/after" :sig "-" :expr false}
+"J@@: (at)@-@5020" {:lang "J" :algo "@: (at)" :lib "-" :id 5020 :doc "https://code.jsoftware.com/wiki/Vocabulary/atco" :sig "-" :expr false}
+"BQN@∘ (atop)@-@5020" {:lang "BQN" :algo "∘ (atop)" :lib "-" :id 5020 :doc "https://mlochbaum.github.io/BQN/doc/compose.html" :sig "-" :expr false}
+"APL@⍤ (atop)@-@5021" {:lang "APL" :algo "⍤ (atop)" :lib "-" :id 5021 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Atop.htm" :sig "-" :expr false}
+"TinyAPL@⍤ (atop)@-@5021" {:lang "TinyAPL" :algo "⍤ (atop)" :lib "-" :id 5021 :doc "https://tinyapl.rubenverg.com/docs/primitive/atop" :sig "-" :expr false}
+"J@@: (at)@-@5021" {:lang "J" :algo "@: (at)" :lib "-" :id 5021 :doc "https://code.jsoftware.com/wiki/Vocabulary/atco" :sig "-" :expr false}
+"BQN@∘ (atop)@-@5021" {:lang "BQN" :algo "∘ (atop)" :lib "-" :id 5021 :doc "https://mlochbaum.github.io/BQN/doc/compose.html" :sig "-" :expr false}
+"APL@⍥ (over)@-@5740" {:lang "APL" :algo "⍥ (over)" :lib "-" :id 5740 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Over.htm" :sig "-" :expr false}
+"TinyAPL@⍥ (over)@-@5740" {:lang "TinyAPL" :algo "⍥ (over)" :lib "-" :id 5740 :doc "https://tinyapl.rubenverg.com/docs/primitive/over" :sig "-" :expr false}
+"Kap@⍥ (over)@-@5740" {:lang "Kap" :algo "⍥ (over)" :lib "-" :id 5740 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_over" :sig "-" :expr false}
+"J@&: (appose)@-@5740" {:lang "J" :algo "&: (appose)" :lib "-" :id 5740 :doc "https://code.jsoftware.com/wiki/Vocabulary/ampco" :sig "-" :expr false}
+"BQN@○ (over)@-@5740" {:lang "BQN" :algo "○ (over)" :lib "-" :id 5740 :doc "https://mlochbaum.github.io/BQN/doc/compose.html" :sig "-" :expr false}
+"TinyAPL@⟜ (right hook)@-@5190" {:lang "TinyAPL" :algo "⟜ (right hook)" :lib "-" :id 5190 :doc "https://tinyapl.rubenverg.com/docs/primitive/right_hook" :sig "-" :expr false}
+"Kap@∘ (compose)@-@5190" {:lang "Kap" :algo "∘ (compose)" :lib "-" :id 5190 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_compose" :sig "-" :expr false}
+"BQN@⟜ (after)@-@5190" {:lang "BQN" :algo "⟜ (after)" :lib "-" :id 5190 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"TinyAPL@⊸ (left hook)@-@5690" {:lang "TinyAPL" :algo "⊸ (left hook)" :lib "-" :id 5690 :doc "https://tinyapl.rubenverg.com/docs/primitive/left_hook" :sig "-" :expr false}
+"Kap@⍛ (inverse compose)@-@5690" {:lang "Kap" :algo "⍛ (inverse compose)" :lib "-" :id 5690 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_inverse_compose" :sig "-" :expr false}
+"BQN@⊸ (before)@-@5690" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5690 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"APL@∘ (beside)@-@5040" {:lang "APL" :algo "∘ (beside)" :lib "-" :id 5040 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Beside.htm" :sig "-" :expr false}
+"TinyAPL@⟜ (right hook)@-@5040" {:lang "TinyAPL" :algo "⟜ (right hook)" :lib "-" :id 5040 :doc "https://tinyapl.rubenverg.com/docs/primitive/right_hook" :sig "-" :expr false}
+"Kap@∘ (compose)@-@5040" {:lang "Kap" :algo "∘ (compose)" :lib "-" :id 5040 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_compose" :sig "-" :expr false}
+"BQN@⟜ (after)@-@5040" {:lang "BQN" :algo "⟜ (after)" :lib "-" :id 5040 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"TinyAPL@⊸ (left hook)@-@5540" {:lang "TinyAPL" :algo "⊸ (left hook)" :lib "-" :id 5540 :doc "https://tinyapl.rubenverg.com/docs/primitive/left_hook" :sig "-" :expr false}
+"Kap@⍛ (inverse compose)@-@5540" {:lang "Kap" :algo "⍛ (inverse compose)" :lib "-" :id 5540 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_inverse_compose" :sig "-" :expr false}
+"BQN@⊸ (before)@-@5540" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5540 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"TinyAPL@«» (fork)@-@5720" {:lang "TinyAPL" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://tinyapl.rubenverg.com/docs/primitive/fork" :sig "-" :expr false}
+"Kap@«» (fork)@-@5720" {:lang "Kap" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_and_fork" :sig "-" :expr false}
 })
