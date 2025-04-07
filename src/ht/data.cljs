@@ -117,7 +117,6 @@
 "C++@unique@<algorithm>@14" {:lang "C++" :algo "unique" :lib "<algorithm>" :id 14 :doc "https://en.cppreference.com/w/cpp/algorithm/unique" :sig "-"}
 "C#@Distinct@Enumerable@15" {:lang "C#" :algo "Distinct" :lib "Enumerable" :id 15 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.distinct" :sig "-"}
 "Clojure@distinct@core@15" {:lang "Clojure" :algo "distinct" :lib "core" :id 15 :doc "https://clojuredocs.org/clojure.core/distinct" :sig "-"}
-"F#@Distinct@Seq@15" {:lang "F#" :algo "Distinct" :lib "Seq" :id 15 :doc "https://www.dotnetperls.com/duplicates-fs" :sig "-"}
 "Kotlin@distinct@collections@15" {:lang "Kotlin" :algo "distinct" :lib "collections" :id 15 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/distinct.html" :sig "-"}
 "Scala@distinct@various@15" {:lang "Scala" :algo "distinct" :lib "various" :id 15 :doc "https://scala-lang.org/api/current/scala/collection/SeqOps.html#distinct-0" :sig "-"}
 "Haskell@nub@Data.List@15" {:lang "Haskell" :algo "nub" :lib "Data.List" :id 15 :doc "https://hackage.haskell.org/package/base-4.18.1.0/docs/Data-List.html#v:nub" :sig "-"}
