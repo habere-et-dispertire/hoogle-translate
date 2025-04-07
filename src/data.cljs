@@ -256,10 +256,10 @@
 "Ruby@all@Enumerable@31" {:lang "Ruby" :algo "all" :lib "Enumerable" :id 31 :doc "https://apidock.com/ruby/Enumerable/all%3F" :sig "-" :expr false}
 "Java@allMatch@Streams@31" {:lang "Java" :algo "allMatch" :lib "Streams" :id 31 :doc "https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#allMatch-java.util.function.Predicate-" :sig "-" :expr false}
 "D@all@std.algorithm@31" {:lang "D" :algo "all" :lib "std.algorithm" :id 31 :doc "https://dlang.org/library/std/algorithm/searching/all.all.html" :sig "-" :expr false}
-"Swift@allSatisfy@@31" {:lang "Swift" :algo "allSatisfy" :lib "" :id 31 :doc "https://developer.apple.com/documentation/swift/array/2994715-allsatisfy" :sig "-" :expr false}
+"Swift@allSatisfy@-@31" {:lang "Swift" :algo "allSatisfy" :lib "-" :id 31 :doc "https://developer.apple.com/documentation/swift/array/2994715-allsatisfy" :sig "-" :expr false}
 "OCaml@for_all@List@31" {:lang "OCaml" :algo "for_all" :lib "List" :id 31 :doc "https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html" :sig "-" :expr false}
 "C#@All@Linq@31" {:lang "C#" :algo "All" :lib "Linq" :id 31 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.all?view=netcore-3.1" :sig "-" :expr false}
-"JavaScript@every@@31" {:lang "JavaScript" :algo "every" :lib "" :id 31 :doc "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" :sig "-" :expr false}
+"JavaScript@every@-@31" {:lang "JavaScript" :algo "every" :lib "-" :id 31 :doc "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" :sig "-" :expr false}
 "Elm@all@List@31" {:lang "Elm" :algo "all" :lib "List" :id 31 :doc "https://package.elm-lang.org/packages/elm/core/latest/List#all" :sig "-" :expr false}
 "Julia@all@Base@31" {:lang "Julia" :algo "all" :lib "Base" :id 31 :doc "https://docs.julialang.org/en/v1/base/collections/#Base.all-Tuple{AbstractArray,Any}" :sig "-" :expr false}
 "Haskell@++@Prelude@42" {:lang "Haskell" :algo "++" :lib "Prelude" :id 42 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:-43--43-" :sig "-" :expr false}
@@ -275,26 +275,27 @@
 "Elixir@++@Kernel@42" {:lang "Elixir" :algo "++" :lib "Kernel" :id 42 :doc "https://hexdocs.pm/elixir/Kernel.html#++/2" :sig "-" :expr false}
 "F#@allPairs@List@100" {:lang "F#" :algo "allPairs" :lib "List" :id 100 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#allPairs" :sig "-" :expr false}
 "Julia@product@IterTools@100" {:lang "Julia" :algo "product" :lib "IterTools" :id 100 :doc "https://juliacollections.github.io/IterTools.jl/v0.2.1/#product(xs...)-1" :sig "-" :expr false}
-"APL@,∘.,@@100" {:lang "APL" :algo ",∘.," :lib "" :id 100 :doc "" :sig "-" :expr true}
-"BQN@⥊⋈⌜@@100" {:lang "BQN" :algo "⥊⋈⌜" :lib "" :id 100 :doc "" :sig "-" :expr true}
-"SQL@CROSS JOIN@@100" {:lang "SQL" :algo "CROSS JOIN" :lib "" :id 100 :doc "https://www.w3resource.com/sql/joins/cross-join.php" :sig "-" :expr false}
+"APL@,∘.,@-@100" {:lang "APL" :algo ",∘.," :lib "-" :id 100 :doc "" :sig "-" :expr true}
+"BQN@⥊⋈⌜@-@100" {:lang "BQN" :algo "⥊⋈⌜" :lib "-" :id 100 :doc "" :sig "-" :expr true}
+"Kap@,,⌻@-@100" {:lang "Kap" :algo ",,⌻" :lib "-" :id 100 :doc "" :sig "-" :expr true}
+"SQL@CROSS JOIN@-@100" {:lang "SQL" :algo "CROSS JOIN" :lib "-" :id 100 :doc "https://www.w3resource.com/sql/joins/cross-join.php" :sig "-" :expr false}
 "Python@all_equal@more-itertools@51" {:lang "Python" :algo "all_equal" :lib "more-itertools" :id 51 :doc "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.all_equal" :sig "-" :expr false}
-"Clojure@apply = @@51" {:lang "Clojure" :algo "apply = " :lib "" :id 51 :doc "" :sig "-" :expr false}
-"Racket@apply = @@51" {:lang "Racket" :algo "apply = " :lib "" :id 51 :doc "" :sig "-" :expr false}
+"Clojure@apply = @-@51" {:lang "Clojure" :algo "apply = " :lib "-" :id 51 :doc "" :sig "-" :expr false}
+"Racket@apply = @-@51" {:lang "Racket" :algo "apply = " :lib "-" :id 51 :doc "" :sig "-" :expr false}
 "Haskell@allEqual@Data.List.HT@51" {:lang "Haskell" :algo "allEqual" :lib "Data.List.HT" :id 51 :doc "https://hackage.haskell.org/package/utility-ht-0.0.15/docs/Data-List-HT.html#v:allEqual" :sig "-" :expr false}
 "JavaScript@allEqual@bbo@51" {:lang "JavaScript" :algo "allEqual" :lib "bbo" :id 51 :doc "https://tnfe.github.io/bbo/#allequal" :sig "-" :expr false}
 "C++@rotate@<algorithm>@4104" {:lang "C++" :algo "rotate" :lib "<algorithm>" :id 4104 :doc "https://en.cppreference.com/w/cpp/algorithm/rotate" :sig "-" :expr false}
 "F#@permute@various@4104" {:lang "F#" :algo "permute" :lib "various" :id 4104 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#permute" :sig "-" :expr false}
-"APL@⌽ (rotate)@@4104" {:lang "APL" :algo "⌽ (rotate)" :lib "" :id 4104 :doc "https://microapl.com/apl_help/ch_020_020_520.htm" :sig "-" :expr false}
-"J@|. (rotate)@@4104" {:lang "J" :algo "|. (rotate)" :lib "" :id 4104 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot#dyadic" :sig "-" :expr false}
+"APL@⌽ (rotate)@-@4104" {:lang "APL" :algo "⌽ (rotate)" :lib "-" :id 4104 :doc "https://microapl.com/apl_help/ch_020_020_520.htm" :sig "-" :expr false}
+"J@|. (rotate)@-@4104" {:lang "J" :algo "|. (rotate)" :lib "-" :id 4104 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot#dyadic" :sig "-" :expr false}
 "Ruby@rotate@Array@4104" {:lang "Ruby" :algo "rotate" :lib "Array" :id 4104 :doc "https://apidock.com/ruby/v2_5_5/Array/rotate" :sig "-" :expr false}
 "Rust@rotate_left@slice@4104" {:lang "Rust" :algo "rotate_left" :lib "slice" :id 4104 :doc "https://doc.rust-lang.org/stable/std/primitive.slice.html#method.rotate_left" :sig "-" :expr false}
 "Java@rotate@Collections@4104" {:lang "Java" :algo "rotate" :lib "Collections" :id 4104 :doc "https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#rotate(java.util.List,%20int)" :sig "-" :expr false}
-"Julia@circshift@@4104" {:lang "Julia" :algo "circshift" :lib "" :id 4104 :doc "https://docs.julialang.org/en/v1/base/arrays/#Base.circshift" :sig "-" :expr false}
+"Julia@circshift@-@4104" {:lang "Julia" :algo "circshift" :lib "-" :id 4104 :doc "https://docs.julialang.org/en/v1/base/arrays/#Base.circshift" :sig "-" :expr false}
 "q@rotate@Core@4104" {:lang "q" :algo "rotate" :lib "Core" :id 4104 :doc "https://code.kx.com/q4m3/A_Built-in_Functions/#a79-rotate" :sig "-" :expr false}
 "Uiua@↻ (rotate)@-@4104" {:lang "Uiua" :algo "↻ (rotate)" :lib "-" :id 4104 :doc "https://www.uiua.org/docs/rotate" :sig "-" :expr false}
 "Rust@dedup@itertools@14" {:lang "Rust" :algo "dedup" :lib "itertools" :id 14 :doc "https://docs.rs/itertools/0.7.6/itertools/structs/struct.Dedup.html" :sig "-" :expr false}
-"Racket@remove-duplicates@@15" {:lang "Racket" :algo "remove-duplicates" :lib "" :id 15 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket/list..rkt%29._remove-duplicates%29%29" :sig "-" :expr false}
+"Racket@remove-duplicates@-@15" {:lang "Racket" :algo "remove-duplicates" :lib "-" :id 15 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket/list..rkt%29._remove-duplicates%29%29" :sig "-" :expr false}
 "OCaml@sort_uniq@List@15" {:lang "OCaml" :algo "sort_uniq" :lib "List" :id 15 :doc "https://ocaml.org/api/List.html#VALsort_uniq" :sig "-" :expr false}
 "Elm@dedup@List@14" {:lang "Elm" :algo "dedup" :lib "List" :id 14 :doc "https://package.elm-lang.org/packages/mgold/elm-nonempty-list/latest/List-Nonempty#dedup" :sig "-" :expr false}
 "Elm@uniq@List@15" {:lang "Elm" :algo "uniq" :lib "List" :id 15 :doc "https://package.elm-lang.org/packages/mgold/elm-nonempty-list/latest/List-Nonempty#uniq" :sig "-" :expr false}
@@ -359,7 +360,7 @@
 "Gleam@intersperse@list@12" {:lang "Gleam" :algo "intersperse" :lib "list" :id 12 :doc "https://hexdocs.pm/gleam_stdlib/gleam/list.html#intersperse" :sig "-" :expr false}
 "Elixir@intersperse@Enum@12" {:lang "Elixir" :algo "intersperse" :lib "Enum" :id 12 :doc "https://hexdocs.pm/elixir/1.12/Enum.html#intersperse/2" :sig "-" :expr false}
 "Racket@intersperse@seq@12" {:lang "Racket" :algo "intersperse" :lib "seq" :id 12 :doc "https://docs.racket-lang.org/seq/index.html#%28def._%28%28lib._seq%2Fmain..rkt%29._intersperse%29%29" :sig "-" :expr false}
-"Racket@add-between@@12" {:lang "Racket" :algo "add-between" :lib "" :id 12 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Flist..rkt%29._add-between%29%29" :sig "-" :expr false}
+"Racket@add-between@-@12" {:lang "Racket" :algo "add-between" :lib "-" :id 12 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Flist..rkt%29._add-between%29%29" :sig "-" :expr false}
 "Elm@intersperse@core@12" {:lang "Elm" :algo "intersperse" :lib "core" :id 12 :doc "https://package.elm-lang.org/packages/elm/core/latest/List#intersperse" :sig "-" :expr false}
 "Agda@foldl@various@1" {:lang "Agda" :algo "foldl" :lib "various" :id 1 :doc "https://agda.github.io/agda-stdlib/v2.2/Effect.Foldable.html#1843" :sig "-" :expr false}
 "Agda@map@various@2" {:lang "Agda" :algo "map" :lib "various" :id 2 :doc "https://agda.github.io/agda-stdlib/v2.2/Data.List.Base.html#1634" :sig "-" :expr false}
