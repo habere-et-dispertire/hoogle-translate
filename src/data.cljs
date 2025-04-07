@@ -187,6 +187,7 @@
 "F#@zip@List@28" {:lang "F#" :algo "zip" :lib "List" :id 28 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#zip" :sig "-" :expr false}
 "Haskell@transpose@Data.List@22" {:lang "Haskell" :algo "transpose" :lib "Data.List" :id 22 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:transpose" :sig "-" :expr false}
 "q@flip@- @22" {:lang "q" :algo "flip" :lib "- " :id 22 :doc "https://code.kx.com/v2/ref/flip/" :sig "-" :expr false}
+"J@|: (transpose)@- @22" {:lang "J" :algo "|: (transpose)" :lib "- " :id 22 :doc "https://code.jsoftware.com/wiki/Vocabulary/barco" :sig "-" :expr false}
 "Clojure@transpose@core.matrix@22" {:lang "Clojure" :algo "transpose" :lib "core.matrix" :id 22 :doc "https://mikera.github.io/core.matrix/doc/clojure.core.matrix.html#var-transpose" :sig "-" :expr false}
 "Elixir@transpose@Matrix@22" {:lang "Elixir" :algo "transpose" :lib "Matrix" :id 22 :doc "https://hexdocs.pm/matrix/Matrix.html#transpose/1" :sig "-" :expr false}
 "Scala@transpose@various@22" {:lang "Scala" :algo "transpose" :lib "various" :id 22 :doc "https://scala-lang.org/api/current/scala/collection/ArrayOps.html#transpose-fffff875" :sig "-" :expr false}
@@ -285,8 +286,10 @@
 "C++@rotate@<algorithm>@4104" {:lang "C++" :algo "rotate" :lib "<algorithm>" :id 4104 :doc "https://en.cppreference.com/w/cpp/algorithm/rotate" :sig "-" :expr false}
 "F#@permute@various@4104" {:lang "F#" :algo "permute" :lib "various" :id 4104 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#permute" :sig "-" :expr false}
 "APL@⌽ (rotate)@@4104" {:lang "APL" :algo "⌽ (rotate)" :lib "" :id 4104 :doc "https://microapl.com/apl_help/ch_020_020_520.htm" :sig "-" :expr false}
+"J@|. (rotate)@@4104" {:lang "J" :algo "|. (rotate)" :lib "" :id 4104 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot#dyadic" :sig "-" :expr false}
 "Ruby@rotate@Array@4104" {:lang "Ruby" :algo "rotate" :lib "Array" :id 4104 :doc "https://apidock.com/ruby/v2_5_5/Array/rotate" :sig "-" :expr false}
 "Rust@rotate_left@Slice@4104" {:lang "Rust" :algo "rotate_left" :lib "Slice" :id 4104 :doc "https://doc.rust-lang.org/stable/std/primitive.slice.html#method.rotate_left" :sig "-" :expr false}
+"Java@rotate@Collections@4104" {:lang "Java" :algo "rotate" :lib "Collections" :id 4104 :doc "https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#rotate(java.util.List,%20int)" :sig "-" :expr false}
 "Julia@circshift@@4104" {:lang "Julia" :algo "circshift" :lib "" :id 4104 :doc "https://docs.julialang.org/en/v1/base/arrays/#Base.circshift" :sig "-" :expr false}
 "q@rotate@Core@4104" {:lang "q" :algo "rotate" :lib "Core" :id 4104 :doc "https://code.kx.com/q4m3/A_Built-in_Functions/#a79-rotate" :sig "-" :expr false}
 "Uiua@↻ (rotate)@-@4104" {:lang "Uiua" :algo "↻ (rotate)" :lib "-" :id 4104 :doc "https://www.uiua.org/docs/rotate" :sig "-" :expr false}
