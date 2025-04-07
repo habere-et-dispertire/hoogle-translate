@@ -12,7 +12,10 @@
 (defonce state (r/atom {:top-padding "250px"
                         :results-table [:tr]
                         :theme :light
-                        :hidden-langs #{}}))
+                        :hidden-langs #{}
+                        :settings-open false
+                        :show-expressions false
+                        :show-libraries false}))
 
 (defonce debug (r/atom {:info ""}))
 
@@ -56,6 +59,7 @@
 (defn get-id   [m] (get m :id))
 (defn get-algo [m] (get m :algo))
 (defn get-lang [m] (get m :lang))
+(defn get-lib  [m] (get m :lib))
 (defn get-sig  [m] (get m :sig))
 
 (defn filter-by-algo-id [id m]
@@ -102,6 +106,15 @@
     "Uiua" "'Uiua386', monospace"
     "'JetBrains Mono', monospace"))
 
+(def third-party-libraries ["Thrust" "RAPIDS cuDF" "pandas" "NumPy" "range-v3" "core.matrix"])
+
+(defn maybe-filter-third-party-libraries [coll]
+  (filter (fn [item]
+            (let [lib (get-lib item)]
+              (or (:show-libraries @state)
+                  (not (and lib (some #(= lib %) third-party-libraries))))))
+          coll))
+
 (defn format-algorithm-with-fonts [algo-text lang]
   (let [special-font (get-algorithm-font lang)
         default-font "'JetBrains Mono', monospace"
@@ -143,20 +156,22 @@
               (swap! state assoc :results-table 
                      (generate-table selection how-to-generate-table))))
           ;; Regular click behavior
-          (reset! state {:top-padding "20px"
-                        :theme current-theme
-                        :hidden-langs (:hidden-langs @state)
-                        :selection (get info-map :id)
-                        :how-to-generate-table :by-algo-id
-                        :results-table (generate-table (get info-map :id) :by-algo-id)})))
-      ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
+          (reset! state (merge @state
+                               {:top-padding "20px"
+                                :theme current-theme
+                                :hidden-langs (:hidden-langs @state)
+                                :selection (get info-map :id)
+                                :how-to-generate-table :by-algo-id
+                                :results-table (generate-table (get info-map :id) :by-algo-id)})))
+      ::stylefy/mode {:on-hover {:background-color (:hover colors)}})}
      [:td {:on-click (fn [e]
                        (.stopPropagation e)
-                       (reset! state {:top-padding "20px"
-                                     :theme current-theme
-                                     :selection (get info-map :lang)
-                                     :how-to-generate-table :by-lang
-                                     :results-table (generate-table (get info-map :lang) :by-lang)}))}
+                       (reset! state (merge @state
+                                            {:top-padding "20px"
+                                             :theme current-theme
+                                             :selection (get info-map :lang)
+                                             :how-to-generate-table :by-lang
+                                             :results-table (generate-table (get info-map :lang) :by-lang)})))}
       [:img {:src (str/join ["/media/logos/" (get-logo-filename (get info-map :lang) current-theme)]) 
              :width "40px" 
              :height "40px"
@@ -167,11 +182,12 @@
                     :color text-color}
             :on-click (fn [e]
                         (.stopPropagation e)
-                        (reset! state {:top-padding "20px"
-                                      :theme current-theme
-                                      :selection (get info-map :lang)
-                                      :how-to-generate-table :by-lang
-                                      :results-table (generate-table (get info-map :lang) :by-lang)}))}
+                        (reset! state (merge @state
+                                             {:top-padding "20px"
+                                              :theme current-theme
+                                              :selection (get info-map :lang)
+                                              :how-to-generate-table :by-lang
+                                              :results-table (generate-table (get info-map :lang) :by-lang)})))}
        (get info-map :lang)]
      
      [:td {:style {:padding "12px 30px"
@@ -261,22 +277,24 @@
               (swap! state assoc :results-table 
                      (generate-table selection how-to-generate-table))))
           ;; Regular click behavior
-          (reset! state {:top-padding "20px"
-                        :theme current-theme
-                        :hidden-langs (:hidden-langs @state)
-                        :selection language-name
-                        :how-to-generate-table :by-lang
-                        :results-table (generate-table language-name :by-lang)})))
-      ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
+          (reset! state (merge @state
+                               {:top-padding "20px"
+                                :theme current-theme
+                                :hidden-langs (:hidden-langs @state)
+                                :selection language-name
+                                :how-to-generate-table :by-lang
+                                :results-table (generate-table language-name :by-lang)})))
+      ::stylefy/mode {:on-hover {:background-color (:hover colors)}})}
      
      ;; Language logo cell
      [:td {:on-click (fn [e]
                        (.stopPropagation e)
-                       (reset! state {:top-padding "20px"
-                                     :theme current-theme
-                                     :selection language-name
-                                     :how-to-generate-table :by-lang
-                                     :results-table (generate-table language-name :by-lang)}))}
+                       (reset! state (merge @state
+                                            {:top-padding "20px"
+                                             :theme current-theme
+                                             :selection language-name
+                                             :how-to-generate-table :by-lang
+                                             :results-table (generate-table language-name :by-lang)})))}
       [:img {:src (str/join ["/media/logos/" (get-logo-filename language-name current-theme)]) 
              :width "40px" 
              :height "40px"
@@ -286,11 +304,12 @@
      [:td {:style {:padding "12px 30px" :color text-color}
            :on-click (fn [e]
                        (.stopPropagation e)
-                       (reset! state {:top-padding "20px"
-                                     :theme current-theme
-                                     :selection language-name
-                                     :how-to-generate-table :by-lang
-                                     :results-table (generate-table language-name :by-lang)}))}
+                       (reset! state (merge @state
+                                            {:top-padding "20px"
+                                             :theme current-theme
+                                             :selection language-name
+                                             :how-to-generate-table :by-lang
+                                             :results-table (generate-table language-name :by-lang)})))}
       language-name]
      
      ;; Algorithm cells - one for each algorithm ID
@@ -326,7 +345,8 @@
                                     (->> data/by-key-map
                                          (filter-by-algo-id algo-id)
                                          (select-keys data/by-key-map)
-                                         (vals))))
+                                         (vals)
+                                         (maybe-filter-third-party-libraries))))
                                 algo-ids-with-names)
         
         ;; Group entries by language
@@ -415,8 +435,8 @@
           ((choose-filter how-to-generate-table) selection)
           (select-keys data/by-key-map)
           (vals)
-          ;; Filter out hidden languages
           (remove #(contains? (:hidden-langs @state) (get-lang %)))
+          (maybe-filter-third-party-libraries)
           (choose-colors how-to-generate-table)
           (sort-by last)
           (map (partial apply generate-row)))]))
@@ -477,18 +497,72 @@
                    (let [selection (or (:selection current-state) (:search-text current-state))
                          how-to-generate-table (or (:how-to-generate-table current-state) 
                                                   (when selection (decide-how selection)))]
-                     (reset! state {:top-padding top-padding
-                                    :theme new-theme
-                                    :selection selection
-                                    :search-text (:search-text current-state)
-                                    :hidden-langs #{}
-                                    :how-to-generate-table how-to-generate-table
-                                    :results-table (when (and selection how-to-generate-table)
-                                                    (generate-table selection how-to-generate-table))}))
+                     (reset! state (merge @state 
+                                       {:search-text selection
+                                        :top-padding top-padding
+                                        :theme new-theme
+                                        :hidden-langs #{}
+                                        :settings-open (:settings-open current-state)
+                                        :show-expressions (:show-expressions current-state)
+                                        :show-libraries (:show-libraries current-state)
+                                        :how-to-generate-table how-to-generate-table
+                                        :results-table (when (and selection how-to-generate-table)
+                                                        (generate-table selection how-to-generate-table))}))
                    ;; Otherwise just update the theme
                    (reset! state (assoc current-state :theme new-theme)))
-                 (update-body-styles new-theme))}
+                 (update-body-styles new-theme)))}
    (if (= (@state :theme) :light) "🌙 Dark" "☀️ Light")])
+
+(defn settings-toggle []
+  [:button
+   {:style (merge (styles/theme-toggle-style (@state :theme))
+                 {:margin-top "50px"
+                  :display "block"
+                  :clear "both"})
+    :on-click #(swap! state update :settings-open not)}
+   "⚙️"])
+
+(defn settings-panel []
+  (when (@state :settings-open)
+    (let [current-theme (@state :theme)
+          colors (get styles/theme-colors current-theme)]
+      [:div {:style {:position "absolute"
+                     :left "50px"
+                     :top "130px"
+                     :background-color (:background colors)
+                     :border (str "1px solid " (:border colors))
+                     :border-radius "5px"
+                     :padding "10px"
+                     :z-index 100
+                     :box-shadow "0 2px 10px rgba(0,0,0,0.2)"}}
+       [:div {:style {:margin "5px 0"
+               :text-align "left"}}
+        [:label {:style {:font-family "'JetBrains Mono', monospace"
+                         :color (:text colors)
+                         :margin-left "5px"
+                         :user-select "none"}}
+         [:input {:type "checkbox"
+                  :checked (@state :show-expressions)
+                  :on-change #(swap! state update :show-expressions not)}]
+         " Show Expressions (not implemented yet)"]]
+       [:div {:style {:margin "5px 0"
+               :text-align "left"}}
+        [:label {:style {:font-family "'JetBrains Mono', monospace"
+                         :color (:text colors)
+                         :margin-left "5px"
+                         :user-select "none"}}
+         [:input {:type "checkbox"
+                  :checked (@state :show-libraries)
+                  :on-change (fn [_]
+                               (swap! state update :show-libraries not)
+                               ;; Then immediately refresh table if results are showing
+                               (when (= (@state :top-padding) "20px")
+                                 (let [selection (or (:selection @state) (:search-text @state))
+                                       how-to-generate-table (:how-to-generate-table @state)]
+                                   (when (and selection how-to-generate-table)
+                                     (swap! state assoc :results-table
+                                            (generate-table selection how-to-generate-table))))))}]
+         " Show Third Party Libraries"]]])))
 
 (defn perform-search 
   ([search-text current-theme]
@@ -516,13 +590,14 @@
                     :else search-text)
          ;; Use parameter to determine whether to reset hidden languages
          existing-hidden-langs (if reset-hidden? #{} (:hidden-langs @state))]
-     (reset! state {:search-text search-text
-                    :top-padding "20px"
-                    :theme current-theme
-                    :selection selection
-                    :hidden-langs existing-hidden-langs
-                    :how-to-generate-table how-to-generate-table
-                    :results-table (generate-table selection how-to-generate-table)}))))
+     (swap! state assoc 
+            :search-text search-text
+            :top-padding "20px"
+            :theme current-theme
+            :selection selection
+            :hidden-langs existing-hidden-langs
+            :how-to-generate-table how-to-generate-table
+            :results-table (generate-table selection how-to-generate-table)))))
 
 (defn debounced-search [search-text current-theme delay-ms]
   (when @debounce-timer
@@ -535,6 +610,8 @@
         colors (get styles/theme-colors current-theme)]
     [:div {:style (styles/app-container-style current-theme (@state :top-padding))}
      [theme-toggle]
+     [settings-toggle]
+     [settings-panel]
      [:a {:href "https://www.youtube.com/c/codereport"
           :style (styles/logo-link)}
       [:img {:src "/media/code_report_circle.png"
