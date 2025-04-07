@@ -38,7 +38,7 @@
 |    Uiua     |          `≡ (rows)`          |   2    |           `-`           |                                                     [doc](https://www.uiua.org/docs/rows)                                                      |
 |     APL     |        `/ (compress)`        |   3    |           `-`           |                                             [doc](http://microapl.com/apl_help/ch_020_020_840.htm)                                             |
 |   Haskell   |           `filter`           |   3    |       `Data.List`       |                              [doc](https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:filter)                               |
-|    Uiua     |          `▽ (keep)`          |   3    |           `-`           |                                                     [doc](https://www.uiua.org/docs/keep)                                                      |
+|    Uiua     |          `▽ (keep)`          |   25   |           `-`           |                                                     [doc](https://www.uiua.org/docs/keep)                                                      |
 |      J      |        `\\ (prefix)`         |   4    |           `-`           |                                            [doc](https://code.jsoftware.com/wiki/Vocabulary/bslash)                                            |
 |     APL     |         `\\ (scan)`          |   4    |           `-`           |                                             [doc](http://microapl.com/apl_help/ch_020_020_820.htm)                                             |
 |   Python    |         `accumulate`         |   4    |       `itertools`       |                                  [doc](https://docs.python.org/3/library/itertools.html#itertools.accumulate)                                  |
@@ -441,7 +441,6 @@
 |      ☾      |      `⪡  (rotate left)`      |  4104  |           `-`           |                       [doc](https://ganer.xyz/moon/?code=%22docs%20are%20WIP%22%E2%A8%9D%F3%B0%BB%BE%E2%A8%81%E2%98%BE)                        |
 |   TinyAPL   |         `/ (reduce)`         |   1    |           `-`           |                                           [doc](https://tinyapl.rubenverg.com/docs/primitive/reduce)                                           |
 |   TinyAPL   |          `¨ (each)`          |   2    |           `-`           |                                            [doc](https://tinyapl.rubenverg.com/docs/primitive/each)                                            |
-|   TinyAPL   |       `⌿ (replicate)`        |   3    |           `-`           |                                         [doc](https://tinyapl.rubenverg.com/docs/primitive/replicate)                                          |
 |   TinyAPL   |      `↟ (on prefixes)`       |   4    |           `-`           |                                        [doc](https://tinyapl.rubenverg.com/docs/primitive/on_prefixes)                                         |
 |   TinyAPL   |       `↡ (on infixes)`       |   5    |           `-`           |                                         [doc](https://tinyapl.rubenverg.com/docs/primitive/on_infixes)                                         |
 |   TinyAPL   |         `⊞ (table)`          |   6    |           `-`           |                                           [doc](https://tinyapl.rubenverg.com/docs/primitive/table)                                            |
@@ -470,3 +469,4 @@
 |     APL     |         `∪ (unique)`         |   15   |           `-`           |                                                     [doc](https://aplwiki.com/wiki/Unique)                                                     |
 |      J      |          `~. (nub)`          |   15   |           `-`           |                                           [doc](https://code.jsoftware.com/wiki/Vocabulary/tildedot)                                           |
 |    Swift    |         `reductions`         |   4    |      `Algorithms`       |            [doc](https://swiftpackageindex.com/apple/swift-algorithms/main/documentation/algorithms/swift/sequence/reductions(_:))             |
+|      J      |          `# (copy)`          |   25   |           `-`           |                                        [doc](https://code.jsoftware.com/wiki/Vocabulary/number#dyadic)                                         |
