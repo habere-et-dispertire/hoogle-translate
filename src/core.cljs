@@ -115,6 +115,12 @@
                   (not (and lib (some #(= lib %) third-party-libraries))))))
           coll))
 
+(defn maybe-filter-expressions [coll]
+  (filter (fn [item]
+            (or (:show-expressions @state)
+                (not (:expr item))))
+          coll))
+
 (defn format-algorithm-with-fonts [algo-text lang]
   (let [special-font (get-algorithm-font lang)
         default-font "'JetBrains Mono', monospace"
@@ -346,7 +352,8 @@
                                          (filter-by-algo-id algo-id)
                                          (select-keys data/by-key-map)
                                          (vals)
-                                         (maybe-filter-third-party-libraries))))
+                                         (maybe-filter-third-party-libraries)
+                                         (maybe-filter-expressions))))
                                 algo-ids-with-names)
         
         ;; Group entries by language
@@ -437,6 +444,7 @@
           (vals)
           (remove #(contains? (:hidden-langs @state) (get-lang %)))
           (maybe-filter-third-party-libraries)
+          (maybe-filter-expressions)
           (choose-colors how-to-generate-table)
           (sort-by last)
           (map (partial apply generate-row)))]))
@@ -543,8 +551,16 @@
                          :user-select "none"}}
          [:input {:type "checkbox"
                   :checked (@state :show-expressions)
-                  :on-change #(swap! state update :show-expressions not)}]
-         " Show Expressions (not implemented yet)"]]
+                  :on-change (fn [_]
+                               (swap! state update :show-expressions not)
+                               ;; Then immediately refresh table if results are showing
+                               (when (= (@state :top-padding) "20px")
+                                 (let [selection (or (:selection @state) (:search-text @state))
+                                       how-to-generate-table (:how-to-generate-table @state)]
+                                   (when (and selection how-to-generate-table)
+                                     (swap! state assoc :results-table
+                                            (generate-table selection how-to-generate-table))))))}]
+         " Show Expressions"]]
        [:div {:style {:margin "5px 0"
                :text-align "left"}}
         [:label {:style {:font-family "'JetBrains Mono', monospace"
