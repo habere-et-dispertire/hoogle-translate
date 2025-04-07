@@ -293,7 +293,7 @@
 "Julia@circshift@@4104" {:lang "Julia" :algo "circshift" :lib "" :id 4104 :doc "https://docs.julialang.org/en/v1/base/arrays/#Base.circshift" :sig "-" :expr false}
 "q@rotate@Core@4104" {:lang "q" :algo "rotate" :lib "Core" :id 4104 :doc "https://code.kx.com/q4m3/A_Built-in_Functions/#a79-rotate" :sig "-" :expr false}
 "Uiua@↻ (rotate)@-@4104" {:lang "Uiua" :algo "↻ (rotate)" :lib "-" :id 4104 :doc "https://www.uiua.org/docs/rotate" :sig "-" :expr false}
-"Rust@dedup@itertools@15" {:lang "Rust" :algo "dedup" :lib "itertools" :id 15 :doc "https://docs.rs/itertools/0.7.6/itertools/structs/struct.Dedup.html" :sig "-" :expr false}
+"Rust@dedup@itertools@14" {:lang "Rust" :algo "dedup" :lib "itertools" :id 14 :doc "https://docs.rs/itertools/0.7.6/itertools/structs/struct.Dedup.html" :sig "-" :expr false}
 "Racket@remove-duplicates@@15" {:lang "Racket" :algo "remove-duplicates" :lib "" :id 15 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket/list..rkt%29._remove-duplicates%29%29" :sig "-" :expr false}
 "OCaml@sort_uniq@List@15" {:lang "OCaml" :algo "sort_uniq" :lib "List" :id 15 :doc "https://ocaml.org/api/List.html#VALsort_uniq" :sig "-" :expr false}
 "Elm@dedup@List@14" {:lang "Elm" :algo "dedup" :lib "List" :id 14 :doc "https://package.elm-lang.org/packages/mgold/elm-nonempty-list/latest/List-Nonempty#dedup" :sig "-" :expr false}
@@ -526,4 +526,13 @@
 "BQN@⊸ (before)@-@5540" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5540 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
 "TinyAPL@«» (fork)@-@5720" {:lang "TinyAPL" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://tinyapl.rubenverg.com/docs/primitive/fork" :sig "-" :expr false}
 "Kap@«» (fork)@-@5720" {:lang "Kap" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_and_fork" :sig "-" :expr false}
+"Rust@append@vec@42" {:lang "Rust" :algo "append" :lib "vec" :id 42 :doc "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.append" :sig "-" :expr false}
+"Rust@chunks@-@11" {:lang "Rust" :algo "chunks" :lib "-" :id 11 :doc "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks" :sig "-" :expr false}
+"Rust@chunk_by@-@23" {:lang "Rust" :algo "chunk_by" :lib "-" :id 23 :doc "https://doc.rust-lang.org/std/primitive.slice.html#method.chunk_by" :sig "-" :expr false}
+"Rust@concat@vec@21" {:lang "Rust" :algo "concat" :lib "vec" :id 21 :doc "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.concat" :sig "-" :expr false}
+"Go@append@-@42" {:lang "Go" :algo "append" :lib "-" :id 42 :doc "https://pkg.go.dev/builtin#append" :sig "-" :expr false}
+"Go@compact@slices@14" {:lang "Go" :algo "compact" :lib "slices" :id 14 :doc "https://pkg.go.dev/slices#Compact" :sig "-" :expr false}
+"Go@concat@slices@21" {:lang "Go" :algo "concat" :lib "slices" :id 21 :doc "https://pkg.go.dev/slices#Concat" :sig "-" :expr false}
+"Go@contains@slices@17" {:lang "Go" :algo "contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
+"Go@chunk@slices@11" {:lang "Go" :algo "chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
 })
