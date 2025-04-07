@@ -211,9 +211,10 @@
 "D@repeat@range@24" {:lang "D" :algo "repeat" :lib "range" :id 24 :doc "https://dlang.org/library/std/range/repeat.html" :sig "-" :expr false}
 "Rust@repeat@Iter@24" {:lang "Rust" :algo "repeat" :lib "Iter" :id 24 :doc "https://doc.rust-lang.org/std/iter/struct.Repeat.html" :sig "-" :expr false}
 "Haskell@replicate@Prelude@25" {:lang "Haskell" :algo "replicate" :lib "Prelude" :id 25 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:replicate" :sig "-" :expr false}
+"APL@/ (replicate)@-@25" {:lang "APL" :algo "/ (replicate)" :lib "-" :id 25 :doc "https://aplwiki.com/wiki/Replicate" :sig "-" :expr false}
 "C++@repeat_n@range-v3@25" {:lang "C++" :algo "repeat_n" :lib "range-v3" :id 25 :doc "https://ericniebler.github.io/range-v3/index.html#tutorial-views" :sig "-" :expr false}
 "C#@repeat@Enumerable@25" {:lang "C#" :algo "repeat" :lib "Enumerable" :id 25 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.repeat?view=netcore-3.1" :sig "-" :expr false}
-"APL@\\ (expand)@-@25" {:lang "APL" :algo "\\ (expand)" :lib "-" :id 25 :doc "http://microapl.com/apl_help/ch_020_020_860.htm" :sig "-" :expr false}
+"APL@\\ (expand)@-@29" {:lang "APL" :algo "\\ (expand)" :lib "-" :id 29 :doc "http://microapl.com/apl_help/ch_020_020_860.htm" :sig "-" :expr false}
 "C++@transform*@<algorithm>@30" {:lang "C++" :algo "transform*" :lib "<algorithm>" :id 30 :doc "https://en.cppreference.com/w/cpp/algorithm/transform" :sig "-" :expr false}
 "Haskell@zipWith@Prelude@30" {:lang "Haskell" :algo "zipWith" :lib "Prelude" :id 30 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:zipWith" :sig "-" :expr false}
 "Clojure@map*@core@30" {:lang "Clojure" :algo "map*" :lib "core" :id 30 :doc "https://clojuredocs.org/clojure.core/map" :sig "-" :expr false}
@@ -222,7 +223,6 @@
 "F#@map2@Seq@30" {:lang "F#" :algo "map2" :lib "Seq" :id 30 :doc "https://msdn.microsoft.com/visualfsharpdocs/conceptual/list.map2%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d" :sig "-" :expr false}
 "C++@filter@range-v3@3" {:lang "C++" :algo "filter" :lib "range-v3" :id 3 :doc "https://ericniebler.github.io/range-v3/index.html#tutorial-views" :sig "-" :expr false}
 "C#@Where@Enumerable@3" {:lang "C#" :algo "Where" :lib "Enumerable" :id 3 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.where?view=netcore-3.1" :sig "-" :expr false}
-"J@copy@-@3" {:lang "J" :algo "copy" :lib "-" :id 3 :doc "https://code.jsoftware.com/wiki/Vocabulary/number#dyadic" :sig "-" :expr false}
 "Java@filter@Streams@3" {:lang "Java" :algo "filter" :lib "Streams" :id 3 :doc "https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#filter-java.util.function.Predicate-" :sig "-" :expr false}
 "OCaml@filter@List@3" {:lang "OCaml" :algo "filter" :lib "List" :id 3 :doc "https://ocaml.org/releases/4.10/htmlman/libref/List.html" :sig "-" :expr false}
 "Clojure@filter@core@3" {:lang "Clojure" :algo "filter" :lib "core" :id 3 :doc "https://clojuredocs.org/clojure.core/filter" :sig "-" :expr false}
