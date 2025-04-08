@@ -553,4 +553,9 @@
 "Go@contains@slices@17" {:lang "Go" :algo "contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
 "Go@chunk@slices@11" {:lang "Go" :algo "chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
 "Uiua@⇌ (reverse)@-@4321" {:lang "Uiua" :algo "⇌ (reverse)" :lib "-" :id 4321 :doc "https://www.uiua.org/docs/reverse" :sig "-" :expr false}
+"Uiua@◰ (unique)@-@32" {:lang "Uiua" :algo "◰ (unique)" :lib "-" :id 32 :doc "https://www.uiua.org/docs/unique" :sig "-" :expr false}
+"APL@≠ (unique mask)@-@32" {:lang "APL" :algo "≠ (unique mask)" :lib "-" :id 32 :doc "https://aplwiki.com/wiki/Nub_Sieve" :sig "-" :expr false}
+"BQN@∊ (mark firsts)@-@32" {:lang "BQN" :algo "∊ (mark firsts)" :lib "-" :id 32 :doc "https://mlochbaum.github.io/BQN/doc/selfcmp.html#mark-firsts" :sig "-" :expr false}
+"J@~: (nub sieve)@-@32" {:lang "J" :algo "~: (nub sieve)" :lib "-" :id 32 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildeco" :sig "-" :expr false}
+"Kap@≠ (unique mask)@-@32" {:lang "Kap" :algo "≠ (unique mask)" :lib "-" :id 32 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_not_equals" :sig "-" :expr false}
 })
