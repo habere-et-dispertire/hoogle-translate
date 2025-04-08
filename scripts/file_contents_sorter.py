@@ -41,7 +41,7 @@ def sort_file(filename):
             for i,x in enumerate(sorted_by_algo_id):
                 f.write('|'.join(x))
 
-        with open('ALGORITHMS_SORTED_BY_LANGUAGE.md', 'w', encoding='utf-8') as f: # create new convience file sorted by Language then by AlgoId
+        with open('ALGORITHMS_SORTED_BY_LANGUAGE.md', 'w', encoding='utf-8') as f: # create new convenience file sorted by Language then by AlgoId
             f.writelines(header)
             for i,x in enumerate(sorted_by_language):
                 f.write('|'.join(x))
@@ -51,7 +51,7 @@ def sort_file(filename):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python sort_file.py <filename>")
+        print("Usage: python file_contents_sorter.py <filename>")
     else:
         filename = sys.argv[1]
         sort_file(filename)
