@@ -100,6 +100,7 @@
 "Ruby@with_index@Enumerable@9" {:lang "Ruby" :algo "with_index" :lib "Enumerable" :id 9 :doc "https://apidock.com/ruby/Enumerator/with_index" :sig "-" :expr false}
 "Kotlin@withIndex@collections@9" {:lang "Kotlin" :algo "withIndex" :lib "collections" :id 9 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/with-index.html" :sig "-" :expr false}
 "Scala@zipWithIndex@various@9" {:lang "Scala" :algo "zipWithIndex" :lib "various" :id 9 :doc "https://scala-lang.org/api/current/scala/collection/IterableOps.html#zipWithIndex-0" :sig "-" :expr false}
+"Uiua@°⊏ (un select)@-@9" {:lang "Uiua" :algo "°⊏ (un select)" :lib "-" :id 9 :doc "https://www.uiua.org/docs/select" :sig "-" :expr true}
 "Haskell@partition@Data.List@10" {:lang "Haskell" :algo "partition" :lib "Data.List" :id 10 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:partition" :sig "-" :expr false}
 "Kotlin@partition@collections@10" {:lang "Kotlin" :algo "partition" :lib "collections" :id 10 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/partition.html" :sig "-" :expr false}
 "Python@partition@more-itertools@10" {:lang "Python" :algo "partition" :lib "more-itertools" :id 10 :doc "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.partition" :sig "-" :expr false}
@@ -108,13 +109,17 @@
 "Rust@partition@iter@10" {:lang "Rust" :algo "partition" :lib "iter" :id 10 :doc "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.partition" :sig "-" :expr false}
 "C++@partition_copy@<algorithm>@10" {:lang "C++" :algo "partition_copy" :lib "<algorithm>" :id 10 :doc "https://en.cppreference.com/w/cpp/algorithm/partition_copy" :sig "-" :expr false}
 "Elixir@split_with@Enum@10" {:lang "Elixir" :algo "split_with" :lib "Enum" :id 10 :doc "https://hexdocs.pm/elixir/Enum.html#split_with/2" :sig "-" :expr false}
+"Uiua@⊕□ (group box)@-@10" {:lang "Uiua" :algo "⊕□ (group box)" :lib "-" :id 10 :doc "https://www.uiua.org/docs/group" :sig "-" :expr true}
 "Clojure@partition@core@11" {:lang "Clojure" :algo "partition" :lib "core" :id 11 :doc "https://clojuredocs.org/clojure.core/partition" :sig "-" :expr false}
+"Uiua@⧈∘¤¤ (stencil id fix fix)@-@11" {:lang "Uiua" :algo "⧈∘¤¤ (stencil id fix fix)" :lib "-" :id 11 :doc "https://www.uiua.org/docs/stencil" :sig "-" :expr true}
 "C++@partition@<algorithm>@13" {:lang "C++" :algo "partition" :lib "<algorithm>" :id 13 :doc "https://en.cppreference.com/w/cpp/algorithm/partition" :sig "-" :expr false}
 "CUDA@partition@Thrust@13" {:lang "CUDA" :algo "partition" :lib "Thrust" :id 13 :doc "https://thrust.github.io/doc/group__partitioning_gac5cdbb402c5473ca92e95bc73ecaf13c.html" :sig "-" :expr false}
 "D@partition@algorithm.sorting@13" {:lang "D" :algo "partition" :lib "algorithm.sorting" :id 13 :doc "https://dlang.org/library/std/algorithm/sorting/partition.html" :sig "-" :expr false}
+"Uiua@⊏⍖ (select fall)@-@13" {:lang "Uiua" :algo "⊏⍖ (select fall)" :lib "-" :id 13 :doc "https://www.uiua.org/docs/fall" :sig "-" :expr true}
 "Shell@uniq@-@14" {:lang "Shell" :algo "uniq" :lib "-" :id 14 :doc "https://ss64.com/bash/uniq.html" :sig "-" :expr false}
 "D@uniq@algorithm.iteration@14" {:lang "D" :algo "uniq" :lib "algorithm.iteration" :id 14 :doc "https://dlang.org/phobos/std_algorithm_iteration.html#uniq" :sig "-" :expr false}
 "C++@unique@<algorithm>@14" {:lang "C++" :algo "unique" :lib "<algorithm>" :id 14 :doc "https://en.cppreference.com/w/cpp/algorithm/unique" :sig "-" :expr false}
+"Uiua@◌°▽ (pop un keep)@-@14" {:lang "Uiua" :algo "◌°▽ (pop un keep)" :lib "-" :id 14 :doc "" :sig "-" :expr true}
 "C#@Distinct@Enumerable@15" {:lang "C#" :algo "Distinct" :lib "Enumerable" :id 15 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.distinct" :sig "-" :expr false}
 "Clojure@distinct@core@15" {:lang "Clojure" :algo "distinct" :lib "core" :id 15 :doc "https://clojuredocs.org/clojure.core/distinct" :sig "-" :expr false}
 "Kotlin@distinct@collections@15" {:lang "Kotlin" :algo "distinct" :lib "collections" :id 15 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/distinct.html" :sig "-" :expr false}
@@ -154,6 +159,7 @@
 "Racket@frequencies@list-utils@19" {:lang "Racket" :algo "frequencies" :lib "list-utils" :id 19 :doc "https://docs.racket-lang.org/list-utils/index.html?q=freq#%28def._%28%28lib._list-utils%2Fmain..rkt%29._frequencies%29%29" :sig "-" :expr false}
 "Python@value_counts@RAPIDS cuDF@19" {:lang "Python" :algo "value_counts" :lib "RAPIDS cuDF" :id 19 :doc "https://docs.rapids.ai/api/cudf/stable/api.html#cudf.core.series.Series.value_counts" :sig "-" :expr false}
 "Python@value_counts@pandas@19" {:lang "Python" :algo "value_counts" :lib "pandas" :id 19 :doc "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html" :sig "-" :expr false}
+"Uiua@°⊚⊛ (un where classify)@-@19" {:lang "Uiua" :algo "°⊚⊛ (un where classify)" :lib "-" :id 19 :doc "https://www.uiua.org/docs/classify" :sig "-" :expr true}
 "D@any@algorithm.searching@20" {:lang "D" :algo "any" :lib "algorithm.searching" :id 20 :doc "https://dlang.org/library/std/algorithm/searching/any.html" :sig "-" :expr false}
 "Haskell@any@Prelude@20" {:lang "Haskell" :algo "any" :lib "Prelude" :id 20 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:any" :sig "-" :expr false}
 "Kotlin@any@collections@20" {:lang "Kotlin" :algo "any" :lib "collections" :id 20 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html" :sig "-" :expr false}
@@ -166,6 +172,7 @@
 "Scala@exists@various@20" {:lang "Scala" :algo "exists" :lib "various" :id 20 :doc "https://scala-lang.org/api/current/scala/collection/IterableOnceOps.html#exists-fffff66f" :sig "-" :expr false}
 "Racket@memf*@base@20" {:lang "Racket" :algo "memf*" :lib "base" :id 20 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Flist..rkt%29._memf%29%29" :sig "-" :expr false}
 "Clojure@some@core@20" {:lang "Clojure" :algo "some" :lib "core" :id 20 :doc "https://clojuredocs.org/clojure.core/some" :sig "-" :expr false}
+"Uiua@/↥ (reduce maximum)@-@20" {:lang "Uiua" :algo "/↥ (reduce maximum)" :lib "-" :id 20 :doc "https://www.uiua.org/docs/reduce" :sig "-" :expr true}
 "APL@, (catenate)@-@21" {:lang "APL" :algo ", (catenate)" :lib "-" :id 21 :doc "http://microapl.com/apl_help/ch_020_020_490.htm" :sig "-" :expr false}
 "Haskell@concat@Prelude@21" {:lang "Haskell" :algo "concat" :lib "Prelude" :id 21 :doc "https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:concat" :sig "-" :expr false}
 "Racket@join@base@21" {:lang "Racket" :algo "join" :lib "base" :id 21 :doc "https://docs.racket-lang.org/algebraic/class_base.html?q=some#%28def._%28%28lib._algebraic%2Fcontrol%2Fmonad..rkt%29._join%29%29" :sig "-" :expr false}
@@ -262,6 +269,7 @@
 "JavaScript@every@-@31" {:lang "JavaScript" :algo "every" :lib "-" :id 31 :doc "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" :sig "-" :expr false}
 "Elm@all@List@31" {:lang "Elm" :algo "all" :lib "List" :id 31 :doc "https://package.elm-lang.org/packages/elm/core/latest/List#all" :sig "-" :expr false}
 "Julia@all@Base@31" {:lang "Julia" :algo "all" :lib "Base" :id 31 :doc "https://docs.julialang.org/en/v1/base/collections/#Base.all-Tuple{AbstractArray,Any}" :sig "-" :expr false}
+"Uiua@/× (reduce multiply)@-@31" {:lang "Uiua" :algo "/× (reduce multiply)" :lib "-" :id 31 :doc "https://www.uiua.org/reduce" :sig "-" :expr true}
 "Haskell@++@Prelude@42" {:lang "Haskell" :algo "++" :lib "Prelude" :id 42 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:-43--43-" :sig "-" :expr false}
 "Racket@append@base@42" {:lang "Racket" :algo "append" :lib "base" :id 42 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28quote._~23~25kernel%29._append%29%29" :sig "-" :expr false}
 "Python@append@list@42" {:lang "Python" :algo "append" :lib "list" :id 42 :doc "https://docs.python.org/3/tutorial/introduction.html#lists" :sig "-" :expr false}
@@ -284,6 +292,7 @@
 "Racket@apply = @-@51" {:lang "Racket" :algo "apply = " :lib "-" :id 51 :doc "" :sig "-" :expr false}
 "Haskell@allEqual@Data.List.HT@51" {:lang "Haskell" :algo "allEqual" :lib "Data.List.HT" :id 51 :doc "https://hackage.haskell.org/package/utility-ht-0.0.15/docs/Data-List-HT.html#v:allEqual" :sig "-" :expr false}
 "JavaScript@allEqual@bbo@51" {:lang "JavaScript" :algo "allEqual" :lib "bbo" :id 51 :doc "https://tnfe.github.io/bbo/#allequal" :sig "-" :expr false}
+"Uiua@/×⧈≍@-@51" {:lang "Uiua" :algo "/×⧈≍" :lib "-" :id 51 :doc "" :sig "-" :expr true}
 "C++@rotate@<algorithm>@4104" {:lang "C++" :algo "rotate" :lib "<algorithm>" :id 4104 :doc "https://en.cppreference.com/w/cpp/algorithm/rotate" :sig "-" :expr false}
 "F#@permute@various@4104" {:lang "F#" :algo "permute" :lib "various" :id 4104 :doc "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#permute" :sig "-" :expr false}
 "APL@⌽ (rotate)@-@4104" {:lang "APL" :algo "⌽ (rotate)" :lib "-" :id 4104 :doc "https://microapl.com/apl_help/ch_020_020_520.htm" :sig "-" :expr false}
@@ -479,26 +488,32 @@
 "Kap@⊢ (identity)@-@5090" {:lang "Kap" :algo "⊢ (identity)" :lib "-" :id 5090 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_identityright" :sig "-" :expr false}
 "J@] (same)@-@5090" {:lang "J" :algo "] (same)" :lib "-" :id 5090 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarert" :sig "-" :expr false}
 "BQN@⊢ (right)@-@5090" {:lang "BQN" :algo "⊢ (right)" :lib "-" :id 5090 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"Uiua@∘ (identity)@-@5090" {:lang "Uiua" :algo "∘ (identity)" :lib "-" :id 5090 :doc "https://www.uiua.org/docs/identity" :sig "-" :expr false}
 "APL@⊢ (right)@-@5111" {:lang "APL" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Right.htm" :sig "-" :expr false}
 "TinyAPL@⊢ (right)@-@5111" {:lang "TinyAPL" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://tinyapl.rubenverg.com/docs/primitive/right" :sig "-" :expr false}
 "Kap@⊢ (right)@-@5111" {:lang "Kap" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_identityright" :sig "-" :expr false}
 "J@] (right)@-@5111" {:lang "J" :algo "] (right)" :lib "-" :id 5111 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarert#dyadic" :sig "-" :expr false}
 "BQN@⊢ (right)@-@5111" {:lang "BQN" :algo "⊢ (right)" :lib "-" :id 5111 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"Uiua@⋅∘ (gap identity)@-@5111" {:lang "Uiua" :algo "⋅∘ (gap identity)" :lib "-" :id 5111 :doc "https://www.uiua.org/tutorial/morestack#planet-notation" :sig "-" :expr true}
 "APL@⊣ (left)@-@5110" {:lang "APL" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Left.htm" :sig "-" :expr false}
 "TinyAPL@⊣ (left)@-@5110" {:lang "TinyAPL" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://tinyapl.rubenverg.com/docs/primitive/left" :sig "-" :expr false}
 "Kap@⊣ (left)@-@5110" {:lang "Kap" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_hideleft" :sig "-" :expr false}
 "J@[ (left)@-@5110" {:lang "J" :algo "[ (left)" :lib "-" :id 5110 :doc "https://code.jsoftware.com/wiki/Vocabulary/squarelt" :sig "-" :expr false}
 "BQN@⊣ (left)@-@5110" {:lang "BQN" :algo "⊣ (left)" :lib "-" :id 5110 :doc "https://mlochbaum.github.io/BQN/doc/identity.html" :sig "-" :expr false}
+"Uiua@⊙◌ (dip pop)@-@5110" {:lang "Uiua" :algo "⊙◌ (dip pop)" :lib "-" :id 5110 :doc "https://www.uiua.org/tutorial/morestack#planet-notation" :sig "-" :expr true}
 "APL@⍨ (duplicate)@-@5230" {:lang "APL" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://help.dyalog.com/latest/index.htm#Language/Primitive%20Operators/Commute.htm" :sig "-" :expr false}
 "TinyAPL@⍨ (duplicate)@-@5230" {:lang "TinyAPL" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://tinyapl.rubenverg.com/docs/primitive/duplicate" :sig "-" :expr false}
 "Kap@⍨ (duplicate)@-@5230" {:lang "Kap" :algo "⍨ (duplicate)" :lib "-" :id 5230 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate" :sig "-" :expr false}
 "J@~ (reflex)@-@5230" {:lang "J" :algo "~ (reflex)" :lib "-" :id 5230 :doc "https://code.jsoftware.com/wiki/Vocabulary/tilde" :sig "-" :expr false}
 "BQN@˜ (self)@-@5230" {:lang "BQN" :algo "˜ (self)" :lib "-" :id 5230 :doc "https://mlochbaum.github.io/BQN/doc/swap.html" :sig "-" :expr false}
+"Uiua@. (duplicate)@-@5230" {:lang "Uiua" :algo ". (duplicate)" :lib "-" :id 5230 :doc "https://www.uiua.org/docs/duplicate" :sig "-" :expr false}
 "APL@⍨ (commute)@-@5030" {:lang "APL" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Commute.htm" :sig "-" :expr false}
 "TinyAPL@⍨ (commute)@-@5030" {:lang "TinyAPL" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://tinyapl.rubenverg.com/docs/primitive/commute" :sig "-" :expr false}
 "Kap@⍨ (commute)@-@5030" {:lang "Kap" :algo "⍨ (commute)" :lib "-" :id 5030 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate" :sig "-" :expr false}
 "J@~ (passive)@-@5030" {:lang "J" :algo "~ (passive)" :lib "-" :id 5030 :doc "https://code.jsoftware.com/wiki/Vocabulary/tilde#dyadic" :sig "-" :expr false}
 "BQN@˜ (swap)@-@5030" {:lang "BQN" :algo "˜ (swap)" :lib "-" :id 5030 :doc "https://mlochbaum.github.io/BQN/doc/swap.html" :sig "-" :expr false}
+"Uiua@: (flip)@-@5030" {:lang "Uiua" :algo ": (flip)" :lib "-" :id 5030 :doc "https://www.uiua.org/docs/flip" :sig "-" :expr false}
+"Uiua@˜ (backward)@-@5030" {:lang "Uiua" :algo "˜ (backward)" :lib "-" :id 5030 :doc "https://www.uiua.org/docs/backward" :sig "-" :expr false}
 "APL@∘ (compose)@-@5020" {:lang "APL" :algo "∘ (compose)" :lib "-" :id 5020 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Beside.htm" :sig "-" :expr false}
 "TinyAPL@∘ (after)@-@5020" {:lang "TinyAPL" :algo "∘ (after)" :lib "-" :id 5020 :doc "https://tinyapl.rubenverg.com/docs/primitive/after" :sig "-" :expr false}
 "J@@: (at)@-@5020" {:lang "J" :algo "@: (at)" :lib "-" :id 5020 :doc "https://code.jsoftware.com/wiki/Vocabulary/atco" :sig "-" :expr false}
@@ -527,6 +542,7 @@
 "BQN@⊸ (before)@-@5540" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5540 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
 "TinyAPL@«» (fork)@-@5720" {:lang "TinyAPL" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://tinyapl.rubenverg.com/docs/primitive/fork" :sig "-" :expr false}
 "Kap@«» (fork)@-@5720" {:lang "Kap" :algo "«» (fork)" :lib "-" :id 5720 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_and_fork" :sig "-" :expr false}
+"Uiua@⊃ (fork)@-@5720" {:lang "Uiua" :algo "⊃ (fork)" :lib "-" :id 5720 :doc "https://www.uiua.org/docs/fork" :sig "-" :expr false}
 "Rust@append@vec@42" {:lang "Rust" :algo "append" :lib "vec" :id 42 :doc "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.append" :sig "-" :expr false}
 "Rust@chunks@-@11" {:lang "Rust" :algo "chunks" :lib "-" :id 11 :doc "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks" :sig "-" :expr false}
 "Rust@chunk_by@-@23" {:lang "Rust" :algo "chunk_by" :lib "-" :id 23 :doc "https://doc.rust-lang.org/std/primitive.slice.html#method.chunk_by" :sig "-" :expr false}
@@ -536,4 +552,5 @@
 "Go@concat@slices@21" {:lang "Go" :algo "concat" :lib "slices" :id 21 :doc "https://pkg.go.dev/slices#Concat" :sig "-" :expr false}
 "Go@contains@slices@17" {:lang "Go" :algo "contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
 "Go@chunk@slices@11" {:lang "Go" :algo "chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
+"Uiua@⇌ (reverse)@-@4321" {:lang "Uiua" :algo "⇌ (reverse)" :lib "-" :id 4321 :doc "https://www.uiua.org/docs/reverse" :sig "-" :expr false}
 })
