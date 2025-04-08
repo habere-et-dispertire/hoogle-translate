@@ -98,6 +98,7 @@
 |    Ruby     |         `with_index`         |   9    |      `Enumerable`       |       |                                             [doc](https://apidock.com/ruby/Enumerator/with_index)                                              |
 |   Kotlin    |         `withIndex`          |   9    |      `collections`      |       |                             [doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/with-index.html)                             |
 |    Scala    |        `zipWithIndex`        |   9    |        `various`        |       |                           [doc](https://scala-lang.org/api/current/scala/collection/IterableOps.html#zipWithIndex-0)                           |
+| Uiua | `°⊏ (un select)` | 9 | `-` | Y | [doc](https://www.uiua.org/docs/select) |
 |   Haskell   |         `partition`          |   10   |       `Data.List`       |       |                            [doc](https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html#v:partition)                            |
 |   Kotlin    |         `partition`          |   10   |      `collections`      |       |                             [doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/partition.html)                              |
 |   Python    |         `partition`          |   10   |    `more-itertools`     |       |                            [doc](https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.partition)                            |
@@ -106,13 +107,17 @@
 |    Rust     |         `partition`          |   10   |         `iter`          |       |                                 [doc](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.partition)                                 |
 |     C++     |       `partition_copy`       |   10   |      `<algorithm>`      |       |                                       [doc](https://en.cppreference.com/w/cpp/algorithm/partition_copy)                                        |
 |   Elixir    |         `split_with`         |   10   |         `Enum`          |       |                                            [doc](https://hexdocs.pm/elixir/Enum.html#split_with/2)                                             |
+| Uiua | `⊕□ (group box)` | 10 | `-` | Y | [doc](https://www.uiua.org/docs/group) |
 |   Clojure   |         `partition`          |   11   |         `core`          |       |                                             [doc](https://clojuredocs.org/clojure.core/partition)                                              |
+| Uiua | `⧈∘¤¤ (stencil id fix fix)` | 11 | `-` | Y | [doc](https://www.uiua.org/docs/stencil) |
 |     C++     |         `partition`          |   13   |      `<algorithm>`      |       |                                          [doc](https://en.cppreference.com/w/cpp/algorithm/partition)                                          |
 |    CUDA     |         `partition`          |   13   |        `Thrust`         |       |                        [doc](https://thrust.github.io/doc/group__partitioning_gac5cdbb402c5473ca92e95bc73ecaf13c.html)                         |
 |      D      |         `partition`          |   13   |   `algorithm.sorting`   |       |                                     [doc](https://dlang.org/library/std/algorithm/sorting/partition.html)                                      |
+| Uiua | `⊏⍖ (select fall)` | 13 | `-` | Y | [doc](https://www.uiua.org/docs/fall) |
 |    Shell    |            `uniq`            |   14   |           `-`           |       |                                                     [doc](https://ss64.com/bash/uniq.html)                                                     |
 |      D      |            `uniq`            |   14   |  `algorithm.iteration`  |       |                                       [doc](https://dlang.org/phobos/std_algorithm_iteration.html#uniq)                                        |
 |     C++     |           `unique`           |   14   |      `<algorithm>`      |       |                                           [doc](https://en.cppreference.com/w/cpp/algorithm/unique)                                            |
+| Uiua | `◌°▽ (pop un keep)` | 14 | `-` | Y | [doc](https://www.uiua.org/docs/keep)
 |     C#      |          `Distinct`          |   15   |      `Enumerable`       |       |                               [doc](https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.distinct)                               |
 |   Clojure   |          `distinct`          |   15   |         `core`          |       |                                              [doc](https://clojuredocs.org/clojure.core/distinct)                                              |
 |   Kotlin    |          `distinct`          |   15   |      `collections`      |       |                              [doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/distinct.html)                              |
@@ -152,6 +157,7 @@
 |   Racket    |        `frequencies`         |   19   |      `list-utils`       |       |        [doc](https://docs.racket-lang.org/list-utils/index.html?q=freq#%28def._%28%28lib._list-utils%2Fmain..rkt%29._frequencies%29%29)        |
 |   Python    |        `value_counts`        |   19   |      `RAPIDS cuDF`      |       |                          [doc](https://docs.rapids.ai/api/cudf/stable/api.html#cudf.core.series.Series.value_counts)                           |
 |   Python    |        `value_counts`        |   19   |        `pandas`         |       |                       [doc](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html)                        |
+| Uiua | `°⊚⊛ (un where classify)` | 19 | `-` | Y | [doc](https://www.uiua.org/docs/classify) |
 |      D      |            `any`             |   20   |  `algorithm.searching`  |       |                                       [doc](https://dlang.org/library/std/algorithm/searching/any.html)                                        |
 |   Haskell   |            `any`             |   20   |        `Prelude`        |       |                                [doc](https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:any)                                |
 |   Kotlin    |            `any`             |   20   |      `collections`      |       |                                [doc](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)                                 |
@@ -164,6 +170,7 @@
 |    Scala    |           `exists`           |   20   |        `various`        |       |                        [doc](https://scala-lang.org/api/current/scala/collection/IterableOnceOps.html#exists-fffff66f)                         |
 |   Racket    |           `memf*`            |   20   |         `base`          |       |            [doc](https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Flist..rkt%29._memf%29%29)             |
 |   Clojure   |            `some`            |   20   |         `core`          |       |                                                [doc](https://clojuredocs.org/clojure.core/some)                                                |
+| Uiua | `/↥ (reduce maximum)` | 20 | `-` | Y | [doc](https://www.uiua.org/docs/reduce) |
 |     APL     |        `, (catenate)`        |   21   |           `-`           |       |                                             [doc](http://microapl.com/apl_help/ch_020_020_490.htm)                                             |
 |   Haskell   |           `concat`           |   21   |        `Prelude`        |       |                              [doc](https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:concat)                               |
 |   Racket    |            `join`            |   21   |         `base`          |       |    [doc](https://docs.racket-lang.org/algebraic/class_base.html?q=some#%28def._%28%28lib._algebraic%2Fcontrol%2Fmonad..rkt%29._join%29%29)     |
@@ -260,6 +267,7 @@
 | JavaScript  |           `every`            |   31   |           `-`           |       |                      [doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)                       |
 |     Elm     |            `all`             |   31   |         `List`          |       |                                     [doc](https://package.elm-lang.org/packages/elm/core/latest/List#all)                                      |
 |    Julia    |            `all`             |   31   |         `Base`          |       |                          [doc](https://docs.julialang.org/en/v1/base/collections/#Base.all-Tuple{AbstractArray,Any})                           |
+| Uiua | `/× (reduce multiply)` | 31 | `-` | Y | [doc](https://www.uiua.org/reduce) |
 |   Haskell   |             `++`             |   42   |        `Prelude`        |       |                             [doc](https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:-43--43-)                              |
 |   Racket    |           `append`           |   42   |         `base`          |       |                  [doc](https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28quote._~23~25kernel%29._append%29%29)                   |
 |   Python    |           `append`           |   42   |         `list`          |       |                                       [doc](https://docs.python.org/3/tutorial/introduction.html#lists)                                        |
@@ -282,6 +290,7 @@
 |   Racket    |          `apply = `          |   51   |           `-`           |       |                                                                    [doc]()                                                                     |
 |   Haskell   |          `allEqual`          |   51   |     `Data.List.HT`      |       |                         [doc](https://hackage.haskell.org/package/utility-ht-0.0.15/docs/Data-List-HT.html#v:allEqual)                         |
 | JavaScript  |          `allEqual`          |   51   |          `bbo`          |       |                                                  [doc](https://tnfe.github.io/bbo/#allequal)                                                   |
+| Uiua | `/×⧈≍` | 51 | `-` | Y | [doc]() |
 |     C++     |           `rotate`           |  4104  |      `<algorithm>`      |       |                                           [doc](https://en.cppreference.com/w/cpp/algorithm/rotate)                                            |
 |     F#      |          `permute`           |  4104  |        `various`        |       |                     [doc](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#permute)                     |
 |     APL     |         `⌽ (rotate)`         |  4104  |           `-`           |       |                                            [doc](https://microapl.com/apl_help/ch_020_020_520.htm)                                             |
@@ -477,26 +486,32 @@
 |     Kap     |        `⊢ (identity)`        |  5090  |           `-`           |       |                                    [doc](https://kapdemo.dhsdevelopments.com/reference.html#_identityright)                                    |
 |      J      |          `] (same)`          |  5090  |           `-`           |       |                                           [doc](https://code.jsoftware.com/wiki/Vocabulary/squarert)                                           |
 |     BQN     |         `⊢ (right)`          |  5090  |           `-`           |       |                                            [doc](https://mlochbaum.github.io/BQN/doc/identity.html)                                            |
+| Uiua | `∘ (identity)` | 5090 | `-` | | [doc](https://www.uiua.org/docs/identity) |
 |     APL     |         `⊢ (right)`          |  5111  |           `-`           |       |                              [doc](https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Right.htm)                              |
 |   TinyAPL   |         `⊢ (right)`          |  5111  |           `-`           |       |                                           [doc](https://tinyapl.rubenverg.com/docs/primitive/right)                                            |
 |     Kap     |         `⊢ (right)`          |  5111  |           `-`           |       |                                    [doc](https://kapdemo.dhsdevelopments.com/reference.html#_identityright)                                    |
 |      J      |         `] (right)`          |  5111  |           `-`           |       |                                       [doc](https://code.jsoftware.com/wiki/Vocabulary/squarert#dyadic)                                        |
 |     BQN     |         `⊢ (right)`          |  5111  |           `-`           |       |                                            [doc](https://mlochbaum.github.io/BQN/doc/identity.html)                                            |
+| Uiua | `⋅∘ (gap identity)` | 5111 | `-` | Y | [doc](https://www.uiua.org/tutorial/morestack#planet-notation) |
 |     APL     |          `⊣ (left)`          |  5110  |           `-`           |       |                              [doc](https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Left.htm)                               |
 |   TinyAPL   |          `⊣ (left)`          |  5110  |           `-`           |       |                                            [doc](https://tinyapl.rubenverg.com/docs/primitive/left)                                            |
 |     Kap     |          `⊣ (left)`          |  5110  |           `-`           |       |                                      [doc](https://kapdemo.dhsdevelopments.com/reference.html#_hideleft)                                       |
 |      J      |          `[ (left)`          |  5110  |           `-`           |       |                                           [doc](https://code.jsoftware.com/wiki/Vocabulary/squarelt)                                           |
 |     BQN     |          `⊣ (left)`          |  5110  |           `-`           |       |                                            [doc](https://mlochbaum.github.io/BQN/doc/identity.html)                                            |
+| Uiua | `⊙◌ (dip pop)` | 5110 | `-` | Y | [doc](https://www.uiua.org/tutorial/morestack#planet-notation) |
 |     APL     |       `⍨ (duplicate)`        |  5230  |           `-`           |       |                           [doc](https://help.dyalog.com/latest/index.htm#Language/Primitive%20Operators/Commute.htm)                           |
 |   TinyAPL   |       `⍨ (duplicate)`        |  5230  |           `-`           |       |                                         [doc](https://tinyapl.rubenverg.com/docs/primitive/duplicate)                                          |
 |     Kap     |       `⍨ (duplicate)`        |  5230  |           `-`           |       |                                  [doc](https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate)                                   |
 |      J      |         `~ (reflex)`         |  5230  |           `-`           |       |                                            [doc](https://code.jsoftware.com/wiki/Vocabulary/tilde)                                             |
 |     BQN     |          `˜ (self)`          |  5230  |           `-`           |       |                                              [doc](https://mlochbaum.github.io/BQN/doc/swap.html)                                              |
+| Uiua | `. (duplicate)` | 5230 | `-` | | [doc](https://www.uiua.org/docs/duplicate) |
 |     APL     |        `⍨ (commute)`         |  5030  |           `-`           |       |                               [doc](https://help.dyalog.com/latest/#Language/Primitive%20Operators/Commute.htm)                                |
 |   TinyAPL   |        `⍨ (commute)`         |  5030  |           `-`           |       |                                          [doc](https://tinyapl.rubenverg.com/docs/primitive/commute)                                           |
 |     Kap     |        `⍨ (commute)`         |  5030  |           `-`           |       |                                  [doc](https://kapdemo.dhsdevelopments.com/reference.html#_commuteduplicate)                                   |
 |      J      |        `~ (passive)`         |  5030  |           `-`           |       |                                         [doc](https://code.jsoftware.com/wiki/Vocabulary/tilde#dyadic)                                         |
 |     BQN     |          `˜ (swap)`          |  5030  |           `-`           |       |                                              [doc](https://mlochbaum.github.io/BQN/doc/swap.html)                                              |
+| Uiua | `: (flip)` | 5030 | `-` | | [doc](https://www.uiua.org/docs/flip) |
+| Uiua | `˜ (backward)` | 5030 | `-` | | [doc](https://www.uiua.org/docs/backward) |
 |     APL     |        `∘ (compose)`         |  5020  |           `-`           |       |                                [doc](https://help.dyalog.com/latest/#Language/Primitive%20Operators/Beside.htm)                                |
 |   TinyAPL   |         `∘ (after)`          |  5020  |           `-`           |       |                                           [doc](https://tinyapl.rubenverg.com/docs/primitive/after)                                            |
 |      J      |          `@: (at)`           |  5020  |           `-`           |       |                                             [doc](https://code.jsoftware.com/wiki/Vocabulary/atco)                                             |
@@ -525,6 +540,7 @@
 |     BQN     |         `⊸ (before)`         |  5540  |           `-`           |       |                                              [doc](https://mlochbaum.github.io/BQN/doc/hook.html)                                              |
 |   TinyAPL   |         `«» (fork)`          |  5720  |           `-`           |       |                                            [doc](https://tinyapl.rubenverg.com/docs/primitive/fork)                                            |
 |     Kap     |         `«» (fork)`          |  5720  |           `-`           |       |                                      [doc](https://kapdemo.dhsdevelopments.com/reference.html#_and_fork)                                       |
+| Uiua | `⊃ (fork)` | 5720 | `-` | | [doc](https://www.uiua.org/docs/fork) |
 |    Rust     |           `append`           |   42   |          `vec`          |       |                                     [doc](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.append)                                     |
 |    Rust     |           `chunks`           |   11   |           `-`           |       |                                    [doc](https://doc.rust-lang.org/std/primitive.slice.html#method.chunks)                                     |
 |    Rust     |          `chunk_by`          |   23   |           `-`           |       |                                   [doc](https://doc.rust-lang.org/std/primitive.slice.html#method.chunk_by)                                    |
@@ -534,3 +550,4 @@
 |     Go      |           `concat`           |   21   |        `slices`         |       |                                                    [doc](https://pkg.go.dev/slices#Concat)                                                     |
 |     Go      |          `contains`          |   17   |        `slices`         |       |                                                   [doc](https://pkg.go.dev/slices#Contains)                                                    |
 |     Go      |           `chunk`            |   11   |        `slices`         |       |                                                     [doc](https://pkg.go.dev/slices#Chunk)                                                     |
+| Uiua | `⇌ (reverse)` | 4321 | `-` | | [doc](https://www.uiua.org/docs/reverse) |
