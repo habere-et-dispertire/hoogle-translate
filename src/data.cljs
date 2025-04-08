@@ -72,7 +72,7 @@
 "Clojure@outer-product@core.matrix@6" {:lang "Clojure" :algo "outer-product" :lib "core.matrix" :id 6 :doc "https://mikera.github.io/core.matrix/doc/clojure.core.matrix.html#var-outer-product" :sig "-" :expr false}
 "APL@. (inner product)@-@7" {:lang "APL" :algo ". (inner product)" :lib "-" :id 7 :doc "http://microapl.com/apl_help/ch_020_020_880.htm" :sig "-" :expr false}
 "C++@inner_product@<numeric>@7" {:lang "C++" :algo "inner_product" :lib "<numeric>" :id 7 :doc "https://en.cppreference.com/w/cpp/algorithm/inner_product" :sig "-" :expr false}
-"Rust@.. / Range@ops@8" {:lang "Rust" :algo ".. / Range" :lib "ops" :id 8 :doc "https://doc.rust-lang.org/std/ops/struct.Range.html" :sig "-" :expr false}
+"Rust@.. (range)@ops@8" {:lang "Rust" :algo ".. (range)" :lib "ops" :id 8 :doc "https://doc.rust-lang.org/std/ops/struct.Range.html" :sig "-" :expr false}
 "APL@⍳ (index generator)@-@8" {:lang "APL" :algo "⍳ (index generator)" :lib "-" :id 8 :doc "http://microapl.com/apl_help/ch_020_020_150.htm" :sig "-" :expr false}
 "J@i. (integers)@-@8" {:lang "J" :algo "i. (integers)" :lib "-" :id 8 :doc "https://code.jsoftware.com/wiki/Vocabulary/idot" :sig "-" :expr false}
 "C++@iota@<numeric>@8" {:lang "C++" :algo "iota" :lib "<numeric>" :id 8 :doc "https://en.cppreference.com/w/cpp/algorithm/iota" :sig "-" :expr false}
@@ -123,7 +123,7 @@
 "Haskell@sortUniq@Data.List.Unique@15" {:lang "Haskell" :algo "sortUniq" :lib "Data.List.Unique" :id 15 :doc "https://hackage.haskell.org/package/Unique-0.4.7.7/docs/Data-List-Unique.html#v:sortUniq" :sig "-" :expr false}
 "Elixir@uniq@Enum@15" {:lang "Elixir" :algo "uniq" :lib "Enum" :id 15 :doc "https://hexdocs.pm/elixir/Enum.html#uniq/1" :sig "-" :expr false}
 "Ruby@uniq@Array@15" {:lang "Ruby" :algo "uniq" :lib "Array" :id 15 :doc "https://apidock.com/ruby/Array/uniq" :sig "-" :expr false}
-"Rust@unique@itertools@15" {:lang "Rust" :algo "unique" :lib "itertools" :id 15 :doc "https://docs.rs/itertools/0.7.6/itertools/structs/struct.Unique.html" :sig "-" :expr false}
+"Rust@unique@itertools@15" {:lang "Rust" :algo "unique" :lib "itertools" :id 15 :doc "https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.unique" :sig "-" :expr false}
 "Uiua@◴ (deduplicate)@-@15" {:lang "Uiua" :algo "◴ (deduplicate)" :lib "-" :id 15 :doc "https://www.uiua.org/docs/deduplicate" :sig "-" :expr false}
 "J@\": (default format)@-@16" {:lang "J" :algo "\": (default format)" :lib "-" :id 16 :doc "https://code.jsoftware.com/wiki/Vocabulary/quoteco" :sig "-" :expr false}
 "APL@⍕ (format)@-@16" {:lang "APL" :algo "⍕ (format)" :lib "-" :id 16 :doc "http://microapl.com/apl_help/ch_020_020_680.htm" :sig "-" :expr false}
@@ -133,7 +133,7 @@
 "q@string@-@16" {:lang "q" :algo "string" :lib "-" :id 16 :doc "https://code.kx.com/v2/ref/string/" :sig "-" :expr false}
 "C++@to_string@<string>@16" {:lang "C++" :algo "to_string" :lib "<string>" :id 16 :doc "https://en.cppreference.com/w/cpp/string/basic_string/to_string" :sig "-" :expr false}
 "Elixir@to_string@various@16" {:lang "Elixir" :algo "to_string" :lib "various" :id 16 :doc "https://hexdocs.pm/elixir/Integer.html#to_string/1" :sig "-" :expr false}
-"Rust@to_string@string@16" {:lang "Rust" :algo "to_string" :lib "string" :id 16 :doc "https://doc.rust-lang.org/std/string/trait.ToString.html" :sig "-" :expr false}
+"Rust@to_string@string@16" {:lang "Rust" :algo "to_string" :lib "string" :id 16 :doc "https://doc.rust-lang.org/std/string/trait.ToString.html#tymethod.to_string" :sig "-" :expr false}
 "Scala@toString@various@16" {:lang "Scala" :algo "toString" :lib "various" :id 16 :doc "https://scala-lang.org/api/current/scala/reflect/AnyValManifest.html#toString-0" :sig "-" :expr false}
 "D@canFind@algorithm.searching@17" {:lang "D" :algo "canFind" :lib "algorithm.searching" :id 17 :doc "https://dlang.org/library/std/algorithm/searching/can_find.can_find.html" :sig "-" :expr false}
 "Kotlin@contains@collections@17" {:lang "Kotlin" :algo "contains" :lib "collections" :id 17 :doc "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains.html" :sig "-" :expr false}
@@ -209,7 +209,7 @@
 "Clojure@repeat@core@24" {:lang "Clojure" :algo "repeat" :lib "core" :id 24 :doc "https://clojuredocs.org/clojure.core/repeat" :sig "-" :expr false}
 "C++@repeat@range-v3@24" {:lang "C++" :algo "repeat" :lib "range-v3" :id 24 :doc "https://ericniebler.github.io/range-v3/index.html#tutorial-views" :sig "-" :expr false}
 "D@repeat@range@24" {:lang "D" :algo "repeat" :lib "range" :id 24 :doc "https://dlang.org/library/std/range/repeat.html" :sig "-" :expr false}
-"Rust@repeat@iter@24" {:lang "Rust" :algo "repeat" :lib "iter" :id 24 :doc "https://doc.rust-lang.org/std/iter/struct.Repeat.html" :sig "-" :expr false}
+"Rust@repeat@iter@24" {:lang "Rust" :algo "repeat" :lib "iter" :id 24 :doc "https://doc.rust-lang.org/std/iter/fn.repeat.html" :sig "-" :expr false}
 "Haskell@replicate@Prelude@25" {:lang "Haskell" :algo "replicate" :lib "Prelude" :id 25 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:replicate" :sig "-" :expr false}
 "APL@/ (replicate)@-@25" {:lang "APL" :algo "/ (replicate)" :lib "-" :id 25 :doc "https://aplwiki.com/wiki/Replicate" :sig "-" :expr false}
 "C++@repeat_n@range-v3@25" {:lang "C++" :algo "repeat_n" :lib "range-v3" :id 25 :doc "https://ericniebler.github.io/range-v3/index.html#tutorial-views" :sig "-" :expr false}
@@ -244,7 +244,7 @@
 "R@outer@-@6" {:lang "R" :algo "outer" :lib "-" :id 6 :doc "https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/outer" :sig "-" :expr false}
 "Ruby@product@Array@100" {:lang "Ruby" :algo "product" :lib "Array" :id 100 :doc "https://apidock.com/ruby/Array/product" :sig "-" :expr false}
 "Racket@cartesian-product@base@100" {:lang "Racket" :algo "cartesian-product" :lib "base" :id 100 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Flist..rkt%29._cartesian-product%29%29" :sig "-" :expr false}
-"Rust@cartesian_product@itertools@100" {:lang "Rust" :algo "cartesian_product" :lib "itertools" :id 100 :doc "https://docs.rs/itertools/0.8.2/itertools/trait.Itertools.html#method.cartesian_product" :sig "-" :expr false}
+"Rust@cartesian_product@itertools@100" {:lang "Rust" :algo "cartesian_product" :lib "itertools" :id 100 :doc "https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.cartesian_product" :sig "-" :expr false}
 "C++@all_of@<algorithm>@31" {:lang "C++" :algo "all_of" :lib "<algorithm>" :id 31 :doc "https://en.cppreference.com/w/cpp/algorithm/all_any_none_of" :sig "-" :expr false}
 "Haskell@all@Prelude@31" {:lang "Haskell" :algo "all" :lib "Prelude" :id 31 :doc "https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-List.html#v:all" :sig "-" :expr false}
 "Clojure@every?@core@31" {:lang "Clojure" :algo "every?" :lib "core" :id 31 :doc "https://clojuredocs.org/clojure.core/every_q" :sig "-" :expr false}
@@ -294,7 +294,7 @@
 "Julia@circshift@-@4104" {:lang "Julia" :algo "circshift" :lib "-" :id 4104 :doc "https://docs.julialang.org/en/v1/base/arrays/#Base.circshift" :sig "-" :expr false}
 "q@rotate@Core@4104" {:lang "q" :algo "rotate" :lib "Core" :id 4104 :doc "https://code.kx.com/q4m3/A_Built-in_Functions/#a79-rotate" :sig "-" :expr false}
 "Uiua@↻ (rotate)@-@4104" {:lang "Uiua" :algo "↻ (rotate)" :lib "-" :id 4104 :doc "https://www.uiua.org/docs/rotate" :sig "-" :expr false}
-"Rust@dedup@itertools@14" {:lang "Rust" :algo "dedup" :lib "itertools" :id 14 :doc "https://docs.rs/itertools/0.7.6/itertools/structs/struct.Dedup.html" :sig "-" :expr false}
+"Rust@dedup@itertools@14" {:lang "Rust" :algo "dedup" :lib "itertools" :id 14 :doc "https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.dedup" :sig "-" :expr false}
 "Racket@remove-duplicates@-@15" {:lang "Racket" :algo "remove-duplicates" :lib "-" :id 15 :doc "https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket/list..rkt%29._remove-duplicates%29%29" :sig "-" :expr false}
 "OCaml@sort_uniq@List@15" {:lang "OCaml" :algo "sort_uniq" :lib "List" :id 15 :doc "https://ocaml.org/api/List.html#VALsort_uniq" :sig "-" :expr false}
 "Elm@dedup@List@14" {:lang "Elm" :algo "dedup" :lib "List" :id 14 :doc "https://package.elm-lang.org/packages/mgold/elm-nonempty-list/latest/List-Nonempty#dedup" :sig "-" :expr false}
@@ -356,7 +356,7 @@
 "Common Lisp@remove-duplicates@-@15" {:lang "Common Lisp" :algo "remove-duplicates" :lib "-" :id 15 :doc "https://novaspec.org/cl/f_remove-duplicates" :sig "-" :expr false}
 "Common Lisp@apply@-@51" {:lang "Common Lisp" :algo "apply" :lib "-" :id 51 :doc "https://novaspec.org/cl/f_apply" :sig "-" :expr false}
 "Haskell@intersperse@Data.List@12" {:lang "Haskell" :algo "intersperse" :lib "Data.List" :id 12 :doc "https://hackage.haskell.org/package/base/docs/Data-List.html#v:intersperse" :sig "-" :expr false}
-"Rust@intersperse@itertools@12" {:lang "Rust" :algo "intersperse" :lib "itertools" :id 12 :doc "https://docs.rs/itertools/0.14.0/itertools/fn.intersperse.html" :sig "-" :expr false}
+"Rust@intersperse@itertools@12" {:lang "Rust" :algo "intersperse" :lib "itertools" :id 12 :doc "https://docs.rs/itertools/latest/itertools/fn.intersperse.html" :sig "-" :expr false}
 "Gleam@intersperse@list@12" {:lang "Gleam" :algo "intersperse" :lib "list" :id 12 :doc "https://hexdocs.pm/gleam_stdlib/gleam/list.html#intersperse" :sig "-" :expr false}
 "Elixir@intersperse@Enum@12" {:lang "Elixir" :algo "intersperse" :lib "Enum" :id 12 :doc "https://hexdocs.pm/elixir/1.12/Enum.html#intersperse/2" :sig "-" :expr false}
 "Racket@intersperse@seq@12" {:lang "Racket" :algo "intersperse" :lib "seq" :id 12 :doc "https://docs.racket-lang.org/seq/index.html#%28def._%28%28lib._seq%2Fmain..rkt%29._intersperse%29%29" :sig "-" :expr false}
