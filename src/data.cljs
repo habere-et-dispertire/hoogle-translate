@@ -527,6 +527,7 @@
 "Kap@⍥ (over)@-@5740" {:lang "Kap" :algo "⍥ (over)" :lib "-" :id 5740 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_over" :sig "-" :expr false}
 "J@&: (appose)@-@5740" {:lang "J" :algo "&: (appose)" :lib "-" :id 5740 :doc "https://code.jsoftware.com/wiki/Vocabulary/ampco" :sig "-" :expr false}
 "BQN@○ (over)@-@5740" {:lang "BQN" :algo "○ (over)" :lib "-" :id 5740 :doc "https://mlochbaum.github.io/BQN/doc/compose.html" :sig "-" :expr false}
+"Uiua@∩ (both)@-@5740" {:lang "Uiua" :algo "∩ (both)" :lib "-" :id 5740 :doc "https://www.uiua.org/docs/both" :sig "-" :expr false}
 "TinyAPL@⟜ (right hook)@-@5190" {:lang "TinyAPL" :algo "⟜ (right hook)" :lib "-" :id 5190 :doc "https://tinyapl.rubenverg.com/docs/primitive/right_hook" :sig "-" :expr false}
 "Kap@∘ (compose)@-@5190" {:lang "Kap" :algo "∘ (compose)" :lib "-" :id 5190 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_compose" :sig "-" :expr false}
 "BQN@⟜ (after)@-@5190" {:lang "BQN" :algo "⟜ (after)" :lib "-" :id 5190 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
