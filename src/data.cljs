@@ -527,16 +527,20 @@
 "Kap@⍥ (over)@-@5740" {:lang "Kap" :algo "⍥ (over)" :lib "-" :id 5740 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_over" :sig "-" :expr false}
 "J@&: (appose)@-@5740" {:lang "J" :algo "&: (appose)" :lib "-" :id 5740 :doc "https://code.jsoftware.com/wiki/Vocabulary/ampco" :sig "-" :expr false}
 "BQN@○ (over)@-@5740" {:lang "BQN" :algo "○ (over)" :lib "-" :id 5740 :doc "https://mlochbaum.github.io/BQN/doc/compose.html" :sig "-" :expr false}
+"Uiua@∩ (both)@-@5740" {:lang "Uiua" :algo "∩ (both)" :lib "-" :id 5740 :doc "https://www.uiua.org/docs/both" :sig "-" :expr false}
 "TinyAPL@⟜ (right hook)@-@5190" {:lang "TinyAPL" :algo "⟜ (right hook)" :lib "-" :id 5190 :doc "https://tinyapl.rubenverg.com/docs/primitive/right_hook" :sig "-" :expr false}
 "Kap@∘ (compose)@-@5190" {:lang "Kap" :algo "∘ (compose)" :lib "-" :id 5190 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_compose" :sig "-" :expr false}
 "BQN@⟜ (after)@-@5190" {:lang "BQN" :algo "⟜ (after)" :lib "-" :id 5190 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"Uiua@⟜ (on)@-@5190" {:lang "Uiua" :algo "⟜ (on)" :lib "-" :id 5190 :doc "https://www.uiua.org/docs/on" :sig "-" :expr false}
 "TinyAPL@⊸ (left hook)@-@5690" {:lang "TinyAPL" :algo "⊸ (left hook)" :lib "-" :id 5690 :doc "https://tinyapl.rubenverg.com/docs/primitive/left_hook" :sig "-" :expr false}
 "Kap@⍛ (inverse compose)@-@5690" {:lang "Kap" :algo "⍛ (inverse compose)" :lib "-" :id 5690 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_inverse_compose" :sig "-" :expr false}
 "BQN@⊸ (before)@-@5690" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5690 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"Uiua@⊸ (by)@-@5690" {:lang "Uiua" :algo "⊸ (by)" :lib "-" :id 5690 :doc "https://www.uiua.org/docs/by" :sig "-" :expr false}
 "APL@∘ (beside)@-@5040" {:lang "APL" :algo "∘ (beside)" :lib "-" :id 5040 :doc "https://help.dyalog.com/latest/#Language/Primitive%20Operators/Beside.htm" :sig "-" :expr false}
 "TinyAPL@⟜ (right hook)@-@5040" {:lang "TinyAPL" :algo "⟜ (right hook)" :lib "-" :id 5040 :doc "https://tinyapl.rubenverg.com/docs/primitive/right_hook" :sig "-" :expr false}
 "Kap@∘ (compose)@-@5040" {:lang "Kap" :algo "∘ (compose)" :lib "-" :id 5040 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_compose" :sig "-" :expr false}
 "BQN@⟜ (after)@-@5040" {:lang "BQN" :algo "⟜ (after)" :lib "-" :id 5040 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
+"Uiua@⊙ (dip)@-@5040" {:lang "Uiua" :algo "⊙ (dip)" :lib "-" :id 5040 :doc "https://www.uiua.org/docs/dip" :sig "-" :expr false}
 "TinyAPL@⊸ (left hook)@-@5540" {:lang "TinyAPL" :algo "⊸ (left hook)" :lib "-" :id 5540 :doc "https://tinyapl.rubenverg.com/docs/primitive/left_hook" :sig "-" :expr false}
 "Kap@⍛ (inverse compose)@-@5540" {:lang "Kap" :algo "⍛ (inverse compose)" :lib "-" :id 5540 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_inverse_compose" :sig "-" :expr false}
 "BQN@⊸ (before)@-@5540" {:lang "BQN" :algo "⊸ (before)" :lib "-" :id 5540 :doc "https://mlochbaum.github.io/BQN/doc/hook.html" :sig "-" :expr false}
@@ -553,6 +557,11 @@
 "Go@contains@slices@17" {:lang "Go" :algo "contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
 "Go@chunk@slices@11" {:lang "Go" :algo "chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
 "Uiua@⇌ (reverse)@-@4321" {:lang "Uiua" :algo "⇌ (reverse)" :lib "-" :id 4321 :doc "https://www.uiua.org/docs/reverse" :sig "-" :expr false}
+"APL@⌽ (reverse)@-@4321" {:lang "APL" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Reverse.htm" :sig "-" :expr false}
+"TinyAPL@⊖ (reverse)@-@4321" {:lang "TinyAPL" :algo "⊖ (reverse)" :lib "-" :id 4321 :doc "https://tinyapl.rubenverg.com/docs/primitive/reverse" :sig "-" :expr false}
+"Kap@⌽ (reverse)@-@4321" {:lang "Kap" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_rotate_horizontallyreverse_horizontally" :sig "-" :expr false}
+"J@|. (reverse)@-@4321" {:lang "J" :algo "|. (reverse)" :lib "-" :id 4321 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot" :sig "-" :expr false}
+"BQN@⌽ (reverse)@-@4321" {:lang "BQN" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://mlochbaum.github.io/BQN/doc/reverse.html" :sig "-" :expr false}
 "Go@reverse@slices@4321" {:lang "Go" :algo "reverse" :lib "slices" :id 4321 :doc "https://pkg.go.dev/slices#Reverse" :sig "-" :expr false}
 "Rust@rev@iter@4321" {:lang "Rust" :algo "rev" :lib "iter" :id 4321 :doc "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.rev" :sig "-" :expr false}
 "Python@reversed@-@4321" {:lang "Python" :algo "reversed" :lib "-" :id 4321 :doc "https://docs.python.org/3/library/functions.html#reversed" :sig "-" :expr false}
@@ -563,4 +572,5 @@
 "BQN@∊ (mark firsts)@-@32" {:lang "BQN" :algo "∊ (mark firsts)" :lib "-" :id 32 :doc "https://mlochbaum.github.io/BQN/doc/selfcmp.html#mark-firsts" :sig "-" :expr false}
 "J@~: (nub sieve)@-@32" {:lang "J" :algo "~: (nub sieve)" :lib "-" :id 32 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildeco" :sig "-" :expr false}
 "Kap@≠ (unique mask)@-@32" {:lang "Kap" :algo "≠ (unique mask)" :lib "-" :id 32 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_not_equals" :sig "-" :expr false}
+"TinyAPL@≠ (nub sieve)@-@32" {:lang "TinyAPL" :algo "≠ (nub sieve)" :lib "-" :id 32 :doc "https://tinyapl.rubenverg.com/docs/primitive/nub_sieve" :sig "-" :expr false}
 })
