@@ -77,7 +77,7 @@
 "J@i. (integers)@-@8" {:lang "J" :algo "i. (integers)" :lib "-" :id 8 :doc "https://code.jsoftware.com/wiki/Vocabulary/idot" :sig "-" :expr false}
 "C++@iota@<numeric>@8" {:lang "C++" :algo "iota" :lib "<numeric>" :id 8 :doc "https://en.cppreference.com/w/cpp/algorithm/iota" :sig "-" :expr false}
 "D@iota@range@8" {:lang "D" :algo "iota" :lib "range" :id 8 :doc "https://dlang.org/library/std/range/iota.html" :sig "-" :expr false}
-"Go@iota@-@8" {:lang "Go" :algo "iota" :lib "-" :id 8 :doc "https://github.com/golang/go/wiki/Iota" :sig "-" :expr false}
+"Go@iota@-@8" {:lang "Go" :algo "iota" :lib "-" :id 8 :doc "https://go.dev/ref/spec#Iota" :sig "-" :expr false}
 "Clojure@range@core@8" {:lang "Clojure" :algo "range" :lib "core" :id 8 :doc "https://clojuredocs.org/clojure.core/range" :sig "-" :expr false}
 "Haskell@range@Data.List.HT@8" {:lang "Haskell" :algo "range" :lib "Data.List.HT" :id 8 :doc "https://hackage.haskell.org/package/utility-ht-0.0.15/docs/Data-List-HT.html#v:range" :sig "-" :expr false}
 "Python@range@-@8" {:lang "Python" :algo "range" :lib "-" :id 8 :doc "https://docs.python.org/3/library/functions.html#func-range" :sig "-" :expr false}
@@ -180,7 +180,7 @@
 "Clojure@join@string@21" {:lang "Clojure" :algo "join" :lib "string" :id 21 :doc "https://clojuredocs.org/clojure.string/join" :sig "-" :expr false}
 "D@join@array@21" {:lang "D" :algo "join" :lib "array" :id 21 :doc "https://dlang.org/library/std/array/join.html" :sig "-" :expr false}
 "Rust@join@vec@21" {:lang "Rust" :algo "join" :lib "vec" :id 21 :doc "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.join" :sig "-" :expr false}
-"Go@join@strings@21" {:lang "Go" :algo "join" :lib "strings" :id 21 :doc "https://golang.org/pkg/strings/#Join" :sig "-" :expr false}
+"Go@Join@strings@21" {:lang "Go" :algo "Join" :lib "strings" :id 21 :doc "https://golang.org/pkg/strings/#Join" :sig "-" :expr false}
 "C#@join@String@21" {:lang "C#" :algo "join" :lib "String" :id 21 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.string.join?view=netframework-4.8" :sig "-" :expr false}
 "F#@join@String@21" {:lang "F#" :algo "join" :lib "String" :id 21 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.string.join?view=netframework-4.8" :sig "-" :expr false}
 "Python@join*@str@21" {:lang "Python" :algo "join*" :lib "str" :id 21 :doc "https://docs.python.org/3/library/stdtypes.html#str.join" :sig "-" :expr false}
@@ -552,17 +552,17 @@
 "Rust@chunk_by@-@23" {:lang "Rust" :algo "chunk_by" :lib "-" :id 23 :doc "https://doc.rust-lang.org/std/primitive.slice.html#method.chunk_by" :sig "-" :expr false}
 "Rust@concat@vec@21" {:lang "Rust" :algo "concat" :lib "vec" :id 21 :doc "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.concat" :sig "-" :expr false}
 "Go@append@-@42" {:lang "Go" :algo "append" :lib "-" :id 42 :doc "https://pkg.go.dev/builtin#append" :sig "-" :expr false}
-"Go@compact@slices@14" {:lang "Go" :algo "compact" :lib "slices" :id 14 :doc "https://pkg.go.dev/slices#Compact" :sig "-" :expr false}
-"Go@concat@slices@21" {:lang "Go" :algo "concat" :lib "slices" :id 21 :doc "https://pkg.go.dev/slices#Concat" :sig "-" :expr false}
-"Go@contains@slices@17" {:lang "Go" :algo "contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
-"Go@chunk@slices@11" {:lang "Go" :algo "chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
+"Go@Compact@slices@14" {:lang "Go" :algo "Compact" :lib "slices" :id 14 :doc "https://pkg.go.dev/slices#Compact" :sig "-" :expr false}
+"Go@Concat@slices@21" {:lang "Go" :algo "Concat" :lib "slices" :id 21 :doc "https://pkg.go.dev/slices#Concat" :sig "-" :expr false}
+"Go@Contains@slices@17" {:lang "Go" :algo "Contains" :lib "slices" :id 17 :doc "https://pkg.go.dev/slices#Contains" :sig "-" :expr false}
+"Go@Chunk@slices@11" {:lang "Go" :algo "Chunk" :lib "slices" :id 11 :doc "https://pkg.go.dev/slices#Chunk" :sig "-" :expr false}
 "Uiua@⇌ (reverse)@-@4321" {:lang "Uiua" :algo "⇌ (reverse)" :lib "-" :id 4321 :doc "https://www.uiua.org/docs/reverse" :sig "-" :expr false}
 "APL@⌽ (reverse)@-@4321" {:lang "APL" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://help.dyalog.com/17.1/Content/Language/Primitive%20Functions/Reverse.htm" :sig "-" :expr false}
 "TinyAPL@⊖ (reverse)@-@4321" {:lang "TinyAPL" :algo "⊖ (reverse)" :lib "-" :id 4321 :doc "https://tinyapl.rubenverg.com/docs/primitive/reverse" :sig "-" :expr false}
 "Kap@⌽ (reverse)@-@4321" {:lang "Kap" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_rotate_horizontallyreverse_horizontally" :sig "-" :expr false}
 "J@|. (reverse)@-@4321" {:lang "J" :algo "|. (reverse)" :lib "-" :id 4321 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot" :sig "-" :expr false}
 "BQN@⌽ (reverse)@-@4321" {:lang "BQN" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://mlochbaum.github.io/BQN/doc/reverse.html" :sig "-" :expr false}
-"Go@reverse@slices@4321" {:lang "Go" :algo "reverse" :lib "slices" :id 4321 :doc "https://pkg.go.dev/slices#Reverse" :sig "-" :expr false}
+"Go@Reverse@slices@4321" {:lang "Go" :algo "Reverse" :lib "slices" :id 4321 :doc "https://pkg.go.dev/slices#Reverse" :sig "-" :expr false}
 "Rust@rev@iter@4321" {:lang "Rust" :algo "rev" :lib "iter" :id 4321 :doc "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.rev" :sig "-" :expr false}
 "Python@reversed@-@4321" {:lang "Python" :algo "reversed" :lib "-" :id 4321 :doc "https://docs.python.org/3/library/functions.html#reversed" :sig "-" :expr false}
 "Python@reverse@-@4321" {:lang "Python" :algo "reverse" :lib "-" :id 4321 :doc "https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types" :sig "-" :expr false}
