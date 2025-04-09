@@ -36,12 +36,12 @@ def sort_file(filename):
         return
     
     try:
-        with open(filename, 'w', encoding='utf-8') as f: # default ALGORITHMS.md file sorted by AlgoId then by Language
+        with open('ALGORITHMS_SORTED_BY_ALGO_ID.md', 'w', encoding='utf-8') as f: # create new file sorted by AlgoId then by Language
             f.writelines(header)
             for i,x in enumerate(sorted_by_algo_id):
                 f.write('|'.join(x))
 
-        with open('ALGORITHMS_SORTED_BY_LANGUAGE.md', 'w', encoding='utf-8') as f: # create new convenience file sorted by Language then by AlgoId
+        with open('ALGORITHMS_SORTED_BY_LANGUAGE.md', 'w', encoding='utf-8') as f: # create new file sorted by Language then by AlgoId
             f.writelines(header)
             for i,x in enumerate(sorted_by_language):
                 f.write('|'.join(x))
@@ -51,7 +51,7 @@ def sort_file(filename):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python file_contents_sorter.py <filename>")
+        print("Usage: python algo_file_sort.py <filename>")
     else:
         filename = sys.argv[1]
         sort_file(filename)
