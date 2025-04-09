@@ -562,6 +562,11 @@
 "Kap@⌽ (reverse)@-@4321" {:lang "Kap" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_rotate_horizontallyreverse_horizontally" :sig "-" :expr false}
 "J@|. (reverse)@-@4321" {:lang "J" :algo "|. (reverse)" :lib "-" :id 4321 :doc "https://code.jsoftware.com/wiki/Vocabulary/bardot" :sig "-" :expr false}
 "BQN@⌽ (reverse)@-@4321" {:lang "BQN" :algo "⌽ (reverse)" :lib "-" :id 4321 :doc "https://mlochbaum.github.io/BQN/doc/reverse.html" :sig "-" :expr false}
+"Go@reverse@slices@4321" {:lang "Go" :algo "reverse" :lib "slices" :id 4321 :doc "https://pkg.go.dev/slices#Reverse" :sig "-" :expr false}
+"Rust@rev@iter@4321" {:lang "Rust" :algo "rev" :lib "iter" :id 4321 :doc "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.rev" :sig "-" :expr false}
+"Python@reversed@-@4321" {:lang "Python" :algo "reversed" :lib "-" :id 4321 :doc "https://docs.python.org/3/library/functions.html#reversed" :sig "-" :expr false}
+"Python@reverse@-@4321" {:lang "Python" :algo "reverse" :lib "-" :id 4321 :doc "https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types" :sig "-" :expr false}
+"C#@Reverse@Enumerable@4321" {:lang "C#" :algo "Reverse" :lib "Enumerable" :id 4321 :doc "https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.reverse" :sig "-" :expr false}
 "Uiua@◰ (unique)@-@32" {:lang "Uiua" :algo "◰ (unique)" :lib "-" :id 32 :doc "https://www.uiua.org/docs/unique" :sig "-" :expr false}
 "APL@≠ (unique mask)@-@32" {:lang "APL" :algo "≠ (unique mask)" :lib "-" :id 32 :doc "https://aplwiki.com/wiki/Nub_Sieve" :sig "-" :expr false}
 "BQN@∊ (mark firsts)@-@32" {:lang "BQN" :algo "∊ (mark firsts)" :lib "-" :id 32 :doc "https://mlochbaum.github.io/BQN/doc/selfcmp.html#mark-firsts" :sig "-" :expr false}
