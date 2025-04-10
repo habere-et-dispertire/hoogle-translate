@@ -1,4 +1,4 @@
-# <p align="center">Hoogle-Translate (Website)</p>
+# <p align="center">Hoogle Translate (Website)</p>
 
 <p align="center">
     <a href="https://github.com/codereport/hoogle-translate/issues" alt="contributions welcome">
