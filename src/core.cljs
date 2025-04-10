@@ -102,7 +102,7 @@
     "APL" "'APL387', monospace"
     "Kap" "'APL387', monospace"
     "BQN" "'BQN386', monospace"
-    "TinyAPL" "'Uiua386', monospace"
+    "TinyAPL" "'TinyAPL386', monospace"
     "Uiua" "'Uiua386', monospace"
     "'JetBrains Mono', monospace"))
 
