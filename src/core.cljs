@@ -107,7 +107,7 @@
     "'JetBrains Mono', monospace"))
 
 (def third-party-libraries
-  {"python"  ["RAPIDS cuDF" "pandas" "NumPy" "range-v3" "core.matrix", "more-itertools"]
+  {"python"  ["RAPIDS cuDF" "pandas" "NumPy" "more-itertools"]
    "c++"     ["range-v3"]
    "rust"    ["itertools"]
    "clojure" ["core.matrix"]})
