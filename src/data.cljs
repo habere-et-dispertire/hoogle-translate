@@ -573,4 +573,7 @@
 "J@~: (nub sieve)@-@32" {:lang "J" :algo "~: (nub sieve)" :lib "-" :id 32 :doc "https://code.jsoftware.com/wiki/Vocabulary/tildeco" :sig "-" :expr false}
 "Kap@≠ (unique mask)@-@32" {:lang "Kap" :algo "≠ (unique mask)" :lib "-" :id 32 :doc "https://kapdemo.dhsdevelopments.com/reference.html#_not_equals" :sig "-" :expr false}
 "TinyAPL@≠ (nub sieve)@-@32" {:lang "TinyAPL" :algo "≠ (nub sieve)" :lib "-" :id 32 :doc "https://tinyapl.rubenverg.com/docs/primitive/nub_sieve" :sig "-" :expr false}
+"Haskell@init@Data.List@33" {:lang "Haskell" :algo "init" :lib "Data.List" :id 33 :doc "https://hackage.haskell.org/package/base-4.21.0.0/docs/Prelude.html#v:init" :sig "-" :expr false}
+"Common Lisp@butLast@-@33" {:lang "Common Lisp" :algo "butLast" :lib "-" :id 33 :doc "https://novaspec.org/cl/f_butlast" :sig "-" :expr false}
+"Pharo@allButLast@-@33" {:lang "Pharo" :algo "allButLast" :lib "-" :id 33 :doc "" :sig "-" :expr false}
 })
