@@ -21,6 +21,33 @@
 
 (defonce debounce-timer (r/atom nil))
 
+;; URL query parameter handling
+(defn get-query-params []
+  (try
+    (let [search (.. js/window -location -search)
+          query-string (subs search 1) ;; Remove leading '?'
+          pairs (when (not (str/blank? query-string))
+                 (str/split query-string #"&"))
+          params (reduce (fn [acc pair]
+                          (if (str/includes? pair "=")
+                            (let [[k v] (str/split pair #"=")]
+                              (assoc acc (keyword k) (js/decodeURIComponent v)))
+                            acc))
+                        {} (or pairs []))]
+      params)
+    (catch js/Error e
+      (.log js/console "Error parsing URL params:" e)
+      {})))
+
+(defn update-url [search-text search-type]
+  (try
+    (when (and search-text (not (str/blank? search-text)))
+      (let [new-url (str (.. js/window -location -pathname) 
+                         "?q=" (js/encodeURIComponent search-text) 
+                         "&type=" (name search-type))]
+        (.replaceState js/history #js {} "" new-url)))
+    (catch js/Error e
+      (.log js/console "Error updating URL:" e))))
 
 ; (defn extract-lang [s]
 ;   (first (str/split s #"@")))
@@ -63,8 +90,13 @@
 (defn get-sig  [m] (get m :sig))
 
 (defn filter-by-algo-id [id m]
-  (map last (filter (partial first-equals id)
-                    (map vector (map get-id (vals m)) (keys m)))))
+  ;; Log for debugging
+  (.log js/console "filter-by-algo-id called with id:" id "type:" (type id))
+  ;; Convert the ID to string for consistent comparison
+  (let [id-str (if (number? id) (str id) id)]
+    ;; Return the same format as the original function - map last (keys)
+    (map last (filter (partial first-equals id-str)
+                     (map vector (map (comp str get-id) (vals m)) (keys m))))))
 
 (defn filter-by-algo-id2 [id m]
   (keep (fn [[k {elem-id :id}]] (when (= id elem-id) k)) m))
@@ -167,22 +199,26 @@
               (swap! state assoc :results-table 
                      (generate-table selection how-to-generate-table))))
           ;; Regular click behavior
-          (reset! state (merge @state
-                               {:top-padding "20px"
-                                :theme current-theme
-                                :hidden-langs (:hidden-langs @state)
-                                :selection (get info-map :id)
-                                :how-to-generate-table :by-algo-id
-                                :results-table (generate-table (get info-map :id) :by-algo-id)})))
-      ::stylefy/mode {:on-hover {:background-color (:hover colors)}})}
+          (let [algo-id (get info-map :id)]
+            (update-url algo-id :by-algo-id)
+            (reset! state (merge @state
+                                {:top-padding "20px"
+                                 :theme current-theme
+                                 :hidden-langs (:hidden-langs @state)
+                                 :selection algo-id
+                                 :how-to-generate-table :by-algo-id
+                                 :results-table (generate-table algo-id :by-algo-id)})))))
+      ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
      [:td {:on-click (fn [e]
                        (.stopPropagation e)
-                       (reset! state (merge @state
-                                            {:top-padding "20px"
-                                             :theme current-theme
-                                             :selection (get info-map :lang)
-                                             :how-to-generate-table :by-lang
-                                             :results-table (generate-table (get info-map :lang) :by-lang)})))}
+                       (let [lang-name (get info-map :lang)]
+                         (update-url lang-name :by-lang)
+                         (reset! state (merge @state
+                                              {:top-padding "20px"
+                                               :theme current-theme
+                                               :selection lang-name
+                                               :how-to-generate-table :by-lang
+                                               :results-table (generate-table lang-name :by-lang)}))))}
       [:img {:src (str/join ["/media/logos/" (get-logo-filename (get info-map :lang) current-theme)]) 
              :width "40px" 
              :height "40px"
@@ -193,12 +229,14 @@
                     :color text-color}
             :on-click (fn [e]
                         (.stopPropagation e)
-                        (reset! state (merge @state
-                                             {:top-padding "20px"
-                                              :theme current-theme
-                                              :selection (get info-map :lang)
-                                              :how-to-generate-table :by-lang
-                                              :results-table (generate-table (get info-map :lang) :by-lang)})))}
+                        (let [lang-name (get info-map :lang)]
+                          (update-url lang-name :by-lang)
+                          (reset! state (merge @state
+                                               {:top-padding "20px"
+                                                :theme current-theme
+                                                :selection lang-name
+                                                :how-to-generate-table :by-lang
+                                                :results-table (generate-table lang-name :by-lang)}))))}
        (get info-map :lang)]
      
      [:td {:style {:padding "12px 30px"
@@ -289,18 +327,21 @@
               (swap! state assoc :results-table 
                      (generate-table selection how-to-generate-table))))
           ;; Regular click behavior
-          (reset! state (merge @state
+          (do
+            (update-url language-name :by-lang)
+            (reset! state (merge @state
                                {:top-padding "20px"
                                 :theme current-theme
                                 :hidden-langs (:hidden-langs @state)
                                 :selection language-name
                                 :how-to-generate-table :by-lang
-                                :results-table (generate-table language-name :by-lang)})))
-      ::stylefy/mode {:on-hover {:background-color (:hover colors)}})}
+                                :results-table (generate-table language-name :by-lang)})))))
+      ::stylefy/mode {:on-hover {:background-color (:hover colors)}}}
      
      ;; Language logo cell
      [:td {:on-click (fn [e]
                        (.stopPropagation e)
+                       (update-url language-name :by-lang)
                        (reset! state (merge @state
                                             {:top-padding "20px"
                                              :theme current-theme
@@ -316,6 +357,7 @@
      [:td {:style {:padding "12px 30px" :color text-color}
            :on-click (fn [e]
                        (.stopPropagation e)
+                       (update-url language-name :by-lang)
                        (reset! state (merge @state
                                             {:top-padding "20px"
                                              :theme current-theme
@@ -334,7 +376,16 @@
            ;; Found algorithm for this language
            [:td {:style {:padding "12px 30px"
                          :font-weight "bold"
-                         :background-color (nth excel-colors color-index)}} 
+                         :background-color (nth excel-colors color-index)}
+                 :on-click (fn [e]
+                             (.stopPropagation e)
+                             (update-url algo-id :by-algo-id)
+                             (reset! state (merge @state
+                                                 {:top-padding "20px"
+                                                  :theme current-theme
+                                                  :selection algo-id
+                                                  :how-to-generate-table :by-algo-id
+                                                  :results-table (generate-table algo-id :by-algo-id)})))} 
             (format-algorithm-with-fonts (get-algo (first matching-entries)) language-name)]
            
            ;; Algorithm not found for this language
@@ -437,23 +488,31 @@
 (defn generate-table [selection how-to-generate-table]
   (if (= how-to-generate-table :table-mode)
     (generate-table-mode (parse-table-mode selection))
-    [:table {:style {:font-family "'JetBrains Mono', monospace"
-                   :padding "12px 12px"
-                   :font-size "20" ; this is for the rows
-                   :margin-left "auto"
-                   :margin-right "auto"
-                   :text-align "center"}}
+    (do
+      ;; Add debugging for algorithm ID searches
+      (when (= how-to-generate-table :by-algo-id)
+        (.log js/console "Generate table for algo ID:" selection)
+        (let [matches (->> data/by-key-map
+                          ((choose-filter how-to-generate-table) selection))]
+          (.log js/console "Found" (count matches) "matches for selection")))
+      
+      [:table {:style {:font-family "'JetBrains Mono', monospace"
+                     :padding "12px 12px"
+                     :font-size "20" ; this is for the rows
+                     :margin-left "auto"
+                     :margin-right "auto"
+                     :text-align "center"}}
 
-     (->> data/by-key-map
-          ((choose-filter how-to-generate-table) selection)
-          (select-keys data/by-key-map)
-          (vals)
-          (remove #(contains? (:hidden-langs @state) (get-lang %)))
-          (maybe-filter-third-party-libraries)
-          (maybe-filter-expressions)
-          (choose-colors how-to-generate-table)
-          (sort-by last)
-          (map (partial apply generate-row)))]))
+       (->> data/by-key-map
+            ((choose-filter how-to-generate-table) selection)
+            (select-keys data/by-key-map)
+            (vals)
+            (remove #(contains? (:hidden-langs @state) (get-lang %)))
+            (maybe-filter-third-party-libraries)
+            (maybe-filter-expressions)
+            (choose-colors how-to-generate-table)
+            (sort-by last)
+            (map (partial apply generate-row)))])))
 
 (defn social-icon [props]
   [:> SocialIcon (merge {:style (styles/social-icon-style)}
@@ -617,6 +676,8 @@
                     :else search-text)
          ;; Use parameter to determine whether to reset hidden languages
          existing-hidden-langs (if reset-hidden? #{} (:hidden-langs @state))]
+     ;; Update URL with search parameters
+     (update-url search-text how-to-generate-table)
      (swap! state assoc 
             :search-text search-text
             :top-padding "20px"
@@ -690,8 +751,31 @@
     (update-body-styles saved-theme))
   nil)
 
+(defn init-from-url []
+  (let [params (get-query-params)
+        q (:q params)
+        type-str (:type params)
+        search-type (when type-str (keyword type-str))
+        theme (:theme @state)]
+    (when (and q (not (str/blank? q)))
+      (js/console.log "Initializing search from URL:" q "type:" (or search-type "default"))
+      
+      ;; For all search types, set the state directly instead of using perform-search
+      (let [how-to-generate-table (or search-type (decide-how q))
+            selection q]
+        (js/console.log "Setting up search with selection:" selection "type:" how-to-generate-table)
+        (reset! state (merge @state
+                            {:top-padding "20px"
+                             :theme theme
+                             :search-text q
+                             :selection selection
+                             :how-to-generate-table how-to-generate-table
+                             :results-table (generate-table selection how-to-generate-table)}))))))
+
 (defn render! []
   (init-theme)
   (rdom/render
    [app-view]
-   (js/document.getElementById "app")))
+   (js/document.getElementById "app"))
+  ;; Initialize from URL parameters if present
+  (js/setTimeout init-from-url 300))
