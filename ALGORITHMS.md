@@ -574,3 +574,4 @@
 |   Haskell   |            `init`            |   33   |       `Data.List`       |       |                               [doc](https://hackage.haskell.org/package/base-4.21.0.0/docs/Prelude.html#v:init)                                |
 | Common Lisp |          `butLast`           |   33   |           `-`           |       |                                                    [doc](https://novaspec.org/cl/f_butlast)                                                    |
 |    Pharo    |         `allButLast`         |   33   |           `-`           |       |                                                                                                                                                |
+|   Scheme    |            `iota`            |   8    |         `list`          |       |                          [doc](https://index.scheme.org/filterset/r7rs_all/search?lib=(scheme%20list)&tag=predicate)                           |
