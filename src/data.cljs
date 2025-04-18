@@ -576,5 +576,5 @@
 "Haskell@init@Data.List@33" {:lang "Haskell" :algo "init" :lib "Data.List" :id 33 :doc "https://hackage.haskell.org/package/base-4.21.0.0/docs/Prelude.html#v:init" :sig "-" :expr false}
 "Common Lisp@butLast@-@33" {:lang "Common Lisp" :algo "butLast" :lib "-" :id 33 :doc "https://novaspec.org/cl/f_butlast" :sig "-" :expr false}
 "Pharo@allButLast@-@33" {:lang "Pharo" :algo "allButLast" :lib "-" :id 33 :doc "" :sig "-" :expr false}
-"Scheme@iota@list@8" {:lang "Scheme" :algo "iota" :lib "list" :id 8 :doc "https://index.scheme.org/filterset/r7rs_all/search?lib=(scheme%20list)&tag=predicate" :sig "-" :expr false}
+"Scheme@iota@list@8" {:lang "Scheme" :algo "iota" :lib "list" :id 8 :doc "https://index.scheme.org/filterset/r7rs_all/%28scheme%2520list%29/iota" :sig "-" :expr false}
 })
